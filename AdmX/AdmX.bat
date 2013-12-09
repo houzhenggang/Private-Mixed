@@ -1,6 +1,6 @@
 ﻿:: AdmX - Aria2 Batch Tools
 :: Release by aa65535
-:: Time: 2013-12-09 22:18:38
+:: Time: 2013-12-09 23:56:24
 :: External command: aria2c.exe, wfr.exe
 
 @echo off
@@ -51,11 +51,11 @@ goto shut
 set "mix=0"& set /p "url=输入下载链接："&& echo "!url!"|find "//"|| goto input
 cls& echo "!url!"| find "\http"&& set "mix=1"
 cls
-:invalid
+:filename
 if !mix!==1 (
 	for /f "tokens=1,2 delims=\" %%i in ("!url!") do (set "fnm=%%i"& set "url=%%j")
 ) else (
-	cls& set /p "fnm=输入文件名："|| goto invalid
+	cls& set /p "fnm=输入文件名："|| goto filename
 )
 if !lim!==0 (title Aria2：!fnm!) else (title [LMT:!init_speed!KB] Aria2：!fnm!)
 cls& aria2c --conf-path=aria2.conf !dml! -o "DwnlData/!fnm!" "!url!"
