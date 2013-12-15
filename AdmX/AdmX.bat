@@ -1,6 +1,6 @@
 ﻿:: AdmX - Aria2 Download Manager for Xunlei
 :: Release by aa65535
-:: Time: 2013-12-10 23:39:24
+:: Time: 2013-12-13 03:08:57
 :: External Command: aria2c.exe, wfr.exe
 
 @echo off
@@ -18,42 +18,29 @@ for /f "eol=# delims=" %%i in (AdmX.ini) do set "%%i"
 :: 限速设置
 set "dml=--max-download-limit=!default_speed!"
 if !speed_limit! equ 1 (
-    set /p "default_speed=限速值KB/s："& set /a "default_speed=!default_speed!"
+    cls& set /p "default_speed=限速值KB/s："& set /a "default_speed=!default_speed!"
     if !default_speed! gtr 0 (set "dml=--max-download-limit=!default_speed!K")
 )
 :: 下载列表判断
 if "%~1"=="" (
-    if exist "!list_file!" (set "lst=!list_file!") else (call :error0& goto :input)
+    if exist "!list_file!" (set "lst=!list_file!") else (echo 下载列表没有找到！& pause>nul& exit)
 ) else (
     set "lst=%~1"
 )
 :: 处理文件名中的"!"
 wfr %lst% -f:"^!" -t:"！"
 :: 读取下载列表并启动下载
-for /f "usebackq eol=# tokens=1,2 delims=\" %%i in ("!lst!") do (
-    set "fnm=%%i"& set "url=%%j"
+for /f "usebackq eol=# tokens=1,2,3 delims=\" %%i in ("!lst!") do (
+    set "fnm=%%i"& set "url=%%j"& set "gid=%%k"& set "header="
     cls& if !default_speed!==0 (title Aria2：!fnm!) else (title [LMT:!default_speed!KB] Aria2：!fnm!)
-    cls& aria2c --conf-path=aria2.conf !dml! -o "Aria2Data/!fnm!" "!url!"
+    if defined gid (set "header=--header="Cookie: !gid!"")
+    cls& aria2c --conf-path=aria2.conf !header! !dml! -o "Aria2Data/!fnm!" "!url!"
     if !errorlevel! equ 0 (wfr !lst! -f:"%%i" -t:"#%%i")
     if !errorlevel! equ 7 goto init
 )
-:: 若下载列表中URI不可用则使用输入模式
-if not defined url (call :error1& goto input)
+:: 若下载列表中URI不可用则退出
+if not defined url (echo 下载列表任务为空！& pause>nul& exit)
 goto shut
-:: 输入模式
-:input
-set /p "url=输入下载链接："&& echo "!url!"|find "//"|| goto input
-cls& echo "!url!"| find "\http"&& set "mix=1"
-cls
-:file
-if defined mix (
-    for /f "tokens=1,2 delims=\" %%i in ("!url!") do (set "fnm=%%i"& set "url=%%j")
-) else (
-    cls& set /p "fnm=输入文件名："|| goto file
-)
-if !default_speed!==0 (title Aria2：!fnm!) else (title [LMT:!default_speed!KB] Aria2：!fnm!)
-cls& aria2c --conf-path=aria2.conf !dml! -o "Aria2Data/!fnm!" "!url!"
-if !errorlevel! equ 7 goto init
 :: 完成关机功能
 :shut
 set /a hh=!time:~0,2!
@@ -62,18 +49,11 @@ if !shut! equ 1 (
         if !hh! geq !period_start! (
             cls& choice /c YN /t 10 /d Y /m 是否关闭计算机& if !errorlevel! equ 1 (shutdown -s -t 30)
         ) else (
-            timeout /t 300& goto shut
+            timeout /t 300 /nobreak& goto shut
         )
     )
 )
 exit
-:: 错误信息
-:error0
-cls& echo 下载列表没有找到！使用手动输入模式。
-goto :eof
-:error1
-cls& echo 下载列表任务为空！使用手动输入模式。
-goto :eof
 :: 批处理配置
 :admxini
 echo 请按任意键开始配置本批处理. . .& pause>nul
@@ -81,7 +61,7 @@ cls& set /p speed_limit=是否开启限速功能[0.不开启，1.开启，默认
 if not defined speed_limit set speed_limit=1
 cls& set /p list_file=输入默认下载列表文件名[默认down.lst]：
 if not defined list_file set list_file=down.lst
-echo #使用ANSI编码保存, 格式: 文件名\下载链接>>!list_file!
+echo #使用ANSI编码保存, 格式: 文件名\下载链接\gdriveid>>!list_file!
 cls& set /p shut=是否开启指定时间段下载完成后关机功能[0.不开启，1.开启，默认1]：
 if not defined shut set shut=1
 cls& (
@@ -121,9 +101,6 @@ cls& set /p max-connection-per-server=同一服务器连接数[数字，默认2]
 if not defined max-connection-per-server set max-connection-per-server=2
 cls& set /p split=单文件最大线程数[数字，默认2]：
 if not defined split set split=2
-:gdriveid
-cls& set /p gdriveid=输入迅雷离线空间ID[gdriveid]：
-if not defined gdriveid goto gdriveid
 (
     echo #磁盘缓存, 需要1.16及以上版本
     echo disk-cache=!disk-cache!M
@@ -137,7 +114,5 @@ if not defined gdriveid goto gdriveid
     echo split=!split!
     echo #最小文件分片大小, 下载线程数上限取决于能分出多少片, 对于小文件重要
     echo min-split-size=2M
-    echo #追加HTTP请求头, 用于迅雷离线下载验证
-    echo header=Cookie: gdriveid=!gdriveid!
 )>aria2.conf|| goto aria2conf
 cls& goto :eof
