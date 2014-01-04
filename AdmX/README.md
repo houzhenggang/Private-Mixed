@@ -30,11 +30,11 @@ wfr.exe 下载地址：http://baiy.cn/utils/wfr/wfr.rar
 
 配置完成后即可使用本批处理了。Aria2还有许多选项可以配置，一般使用的话默认足够。
 
-详细的配置可以自行修改`aria2.conf`文件，参数可以参考aria2的manual ：http://aria2.sourceforge.net/manual/en/html/aria2c.html 。
+详细的配置可以自行修改`aria2.conf`文件，参数可以参考 [aria2的manual文档](http://aria2.sourceforge.net/manual/en/html/aria2c.html)。
 
 **关于下载列表的使用：**
 
-你需要安装`ThunderAssistant.user.js`脚本对离线下载链接进行提取 ，点击右侧`View Raw`按钮即可安装，安装完成后离线页面会出现`提取地址`菜单，勾选需要下载的任务后，点击`提取地址`菜单即可输出合适的格式了，直接复制粘贴进下载列表即可。
+你需要安装 [ThunderAssistant.user.js](https://github.com/aa65535/other/raw/master/AdmX/ThunderAssistant.user.js) 脚本对离线下载链接进行提取 ，安装完成后离线页面会出现`提取地址`菜单，勾选需要下载的任务后，点击`提取地址`菜单即可输出合适的格式了，直接复制粘贴进下载列表即可。
 
 右下角的`保存为文件`可以保存下载列表，但是注意此列表为UTF-8编码，需要转换为ANSI编码才能使用。
 
