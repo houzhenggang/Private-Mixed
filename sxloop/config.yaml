@@ -1,0 +1,10 @@
+name: sxloop
+version: 1
+cron:
+- description: cron
+  url: sxloop.php
+  schedule: every 10 mins
+  timezone: Beijing
+handle:
+- compress:  if ( out_header["Content-type"] ~ "text/css" ) compress
+- compress:  if ( out_header["Content-type"] ~ "text/html" ) compress
