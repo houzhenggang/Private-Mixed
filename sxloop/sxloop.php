@@ -31,6 +31,7 @@ function getfile() {
 			$files[1][] = $file;
 		}
 	}
+	closedir($current_dir);
 	return $files;
 }
 
