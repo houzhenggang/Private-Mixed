@@ -1,2 +1,5 @@
 *.exe
 *.tmp.*
+*.pyc
+*.swp
+Avatar-Uploader/build/
