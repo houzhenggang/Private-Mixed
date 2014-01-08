@@ -1,0 +1,1 @@
+pyuic4 avatar.ui > ../core/ui.py
