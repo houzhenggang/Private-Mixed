@@ -1,0 +1,1024 @@
+/**
+ * PCBETA Space Style
+ * Author by aa65535
+ * LastModified 2013-12-08 00:11:37
+ */
+
+/**
+ * [background image]
+ */
+html {
+	background: url('http://static.pb.pbcdn.com/data/attachment/album/201308/26/2309359pfa3akakr9sdae3.png') no-repeat, url('http://static.pb.pbcdn.com/data/attachment/album/201208/25/001355eocaak7diaoc7aqj.jpg') repeat-y, radial-gradient(transparent 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, transparent 33%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 17%, rgba(255, 255, 255, 0.43) 19%, transparent 20%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, transparent 14%), linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0B1284 50%, #760EA1 60%, #83096E 70%, #840B2A 80%, #B13E12 90%, #E27412 100%) !important;
+	background-position: right bottom, center 115px, 0 0, 0 0, 0 110px, -130px -170px, 130px 370px, 0 0, 0 0 !important;
+	-webkit-background-size: auto auto, auto auto, 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100% !important;
+	-moz-background-size: auto auto, auto auto, 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100% !important;
+	background-size: auto auto, auto auto, 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100% !important;
+	background-color: #840B2A !important;
+	min-height: 100%;
+}
+body {
+	background: transparent url('http://static.pb.pbcdn.com/data/attachment/album/201208/25/0013563t8m7ur5zsvrvi8m.jpg') no-repeat center 0 !important;
+	text-shadow: 0 0 10px #FFF;
+	color: #000 !important;
+	_display: none !important;
+}
+#hd {
+	background: transparent url('http://static.pb.pbcdn.com/data/attachment/album/201208/26/0208028n00tc70vvzc6umk.png') no-repeat 0 19px !important;
+	height: 115px !important;
+	text-shadow: none;
+}
+
+/**
+ * [top shadow]
+ */
+html:before {
+	content: "";
+	position: fixed;
+	top: -10px;
+	left: 0;
+	width: 100%;
+	height: 10px;
+	-webkit-box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	box-shadow: 0px 0px 10px rgba(0,0,0,.8);
+	z-index: 100;
+}
+
+/**
+ * IE block
+ */
+html.ie5, html.ie6, html.ie7, html.ie8, html.ie9 {
+	background: #FFF url('http://static.pb.pbcdn.com/data/attachment/album/201305/02/002343gteg8071y0117b1e.gif') no-repeat fixed center center !important;
+}
+html.ie5 #space, html.ie6 #space, html.ie7 #space, html.ie8 #space, html.ie9 #space {
+	display: none !important;
+}
+
+/**
+ * [magicreceivegift party]
+ */
+#magicreceivegift {
+	position: fixed !important;
+	top: auto !important;
+	right: -32px;
+	bottom: 50% !important;
+	height: 83px;
+	-webkit-transition-duration: 1s;
+	-moz-transition-duration: 1s;
+	-o-transition-duration: 1s;
+	-ms-transition-duration: 1s;
+	transition-duration: 1s;
+	-webkit-animation: gift 3s !important;
+	-moz-animation: gift 3s !important;
+	-ms-animation: gift 3s !important;
+	-o-animation: gift 3s !important;
+	animation: gift 3s !important;
+	background: transparent url('http://static.cdn.pcbeta.com/data/attachment/album/201312/07/235827mb2bxsutztlwmlcs.png') no-repeat 0% center !important;
+}
+#magicreceivegift:hover {
+	-webkit-transform: translateX(-33px);
+	-moz-transform: translateX(-33px);
+	-o-transform: translateX(-33px);
+	-ms-transform: translateX(-33px);
+	transform: translateX(-33px);
+}
+#magicreceivegift img {
+	width: 74px;
+	height: 83px;
+	filter: alpha(opacity=0);
+	opacity: 0;
+}
+/**
+ * [gift animation]
+ */
+@keyframes gift {
+	0% {
+		width: 32px;
+	}
+	50% {
+		width: 107px;
+	}
+	100% {
+		width: 74px;
+	};
+}
+@-moz-keyframes gift {
+	0% {
+		width: 32px;
+	}
+	50% {
+		width: 107px;
+	}
+	100% {
+		width: 74px;
+	};
+}
+@-webkit-keyframes gift {
+	0% {
+		width: 32px;
+	}
+	50% {
+		width: 107px;
+	}
+	100% {
+		width: 74px;
+	};
+}
+@-ms-keyframes gift {
+	0% {
+		width: 32px;
+	}
+	50% {
+		width: 107px;
+	}
+	100% {
+		width: 74px;
+	};
+}
+@-o-keyframes gift {
+	0% {
+		width: 32px;
+	}
+	50% {
+		width: 107px;
+	}
+	100% {
+		width: 74px;
+	};
+}
+
+/**
+ * [thread list hide]
+ */
+.bm .bm_c .tl {
+	height: 523px;
+	background: transparent url('http://static.pb.pbcdn.com/data/attachment/album/201302/01/025040lczsmz85acec0r70.jpg') no-repeat center 0 !important;
+}
+
+/**
+ * [navigation]
+ */
+#nv {
+	left: 0 !important;
+	padding-left: 0 !important;
+}
+#nv li {
+	background: rgba(255, 255, 255, 0.6) !important;
+}
+#nv li, .ml li, .mlp img, .mla .c a,#comment dt {
+	padding: 0 !important;
+}
+#nv li a {
+	line-height: 31px !important;
+}
+#nv li:hover {
+	background-color: rgba(255, 0, 255, 0.7) !important;
+	-webkit-transition: background 1s ease;
+	-moz-transition: background 1s ease;
+	-o-transition: background 1s ease;
+	-ms-transition: background 1s ease;
+	transition: background 1s ease;
+}
+#nv a:hover {
+	color: #FFF !important;
+	-webkit-transition: color 1s ease;
+	-moz-transition: color 1s ease;
+	-o-transition: color 1s ease;
+	-ms-transition: color 1s ease;
+	transition: color 1s ease;
+}
+#nv a:active {
+	color: #1FFF00 !important;
+}
+#nv li a, a:hover, .xg1 a:hover, #statistic_content .xi1 {
+	color: #F0F !important;
+}
+#nv a {
+	padding: 0 26px !important;
+}
+
+td.m_c, .p_pop.facel {
+	background: rgba(255, 255, 255, 0.7) !important;
+}
+
+/**
+ * [content]
+ */
+#ct {
+	margin-bottom: 25px;
+	/*min-height: 2007px !important;*/;
+}
+#ct.wp.cl, .avt img {
+	background: rgba(255, 255, 255, 0.4) !important;
+}
+
+.bm .bm_c, #ct .move-span .blocktitle, .tl tr:hover th, .tl tr:hover td, .albim_pic_title {
+	background: rgba(255, 255, 255, 0.3) !important;
+}
+
+/**
+ * [selection style]
+ */
+::selection {
+	color: #F0F !important;
+	background: rgba(1, 1, 1, 0) !important;
+}
+::-moz-selection {
+	color: #F0F !important;
+	background: rgba(1, 1, 1, 0) !important;
+}
+
+/**
+ * [clear background]
+ */
+.o.pns, .ct2 .mn, .mm, .bm, .tedt .area, textarea, input, button, #pcd .hm img, #comment dt,.pt.hm, .mlp img {
+	background: none !important;
+}
+
+/**
+ * [reset font color]
+ */
+.pns .pnc, a, .block .title {
+	color: #233F93 !important;
+}
+.xg1.xw0, .xg1, .xg1 a {
+	color: #444 !important;
+}
+
+#music_content {
+	padding: 0 10px !important;
+}
+
+button, .pt, .mla li, .mlp li {
+	border: 1px solid #009ad9 !important;
+}
+
+#pcd .hm img, #comment dt, .tedt, body {
+	border: none !important;
+}
+
+/**
+ * [hide elements]
+ */
+#toptb, .hm .mbn, .md_ctrl, .focus, .ct2 .sd, #spaceinfoshow, .xg2, .gol, iframe, .ct_vw_sd, .tl #delform, #radio, #wall .title .y {
+	display: none !important;
+}
+
+/**
+ * [comment party]
+ */
+#comment_ul.el {
+	height: 1610px !important;
+	overflow: hidden !important;
+	padding-left: 5px;
+}
+#comment_ul dl {
+	-webkit-transition: all .3s ease;
+	-moz-transition: all .3s ease;
+	-o-transition: all .3s ease;
+	-ms-transition: all .3s ease;
+	transition: all .3s ease;
+}
+#comment_ul dl:hover {
+	margin-left: 20px;
+}
+#comment_ul dd {
+	max-height: 350px;
+	overflow-y: auto;
+}
+
+#trace_ul li {
+	padding: 10px 4px !important;
+}
+
+.bm_c, .mls li {
+	padding: 10px 10px !important;
+}
+
+/**
+ * [main avatar style]
+ */
+#profile_content .hm {
+	height: 501px !important;
+	width: 450px !important;
+}
+#profile_content .hm img {
+	-webkit-filter: grayscale(0.2);
+}
+#profile_content .hm img:hover {
+	-webkit-filter: grayscale(0);
+}
+
+.ct2 .mn, .ct_vw_mn {
+	float: none !important;
+	width: auto !important;
+}
+
+.xl2 li {
+	width: 24% !important;
+	height: 18px !important;
+}
+
+/**
+ * [ul_list background image]
+ */
+.ul_diy a {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAASFBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP+oX8rvAAAAF3RSTlMAEKAg0OBgMM+QQO9Q3/BwwI9/gJ9vrx09wm0AAAB6SURBVHhebc85EsMwDATBAUHw0Ol7//9TByxbCjRZB4sqcNnUlBzsUQCwu7ID3AIWIEtPAFPDZ+wtaTVgktoahFLZbg50SerUcNzai6LY98Kobio1G0eLtHDOi+Z6clqta7bD2ipJzf6OCmR9fh73LauPwTB4TBeffwHsDATj+FifXAAAAABJRU5ErkJggg==') !important;
+}
+.ul_msg a {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAANlBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8Vv075AAAAEXRSTlMAwD+AMPBQcOAgEKBg75/PkIdP738AAABZSURBVHhehctJDsQgDAXRb2wzZOr2/S8bwAkim+QtSyq4JTiBK7tdDg/JBg88B6nnHNZaaQ72EdTDRo1aptjDLzRFlAHYwJAEQEeI6CJlU6r+uLEKHpLgzQkvzQg94YUhGQAAAABJRU5ErkJggg==') !important;
+}
+.ul_avt a {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAQlBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8aGWHeAAAAFXRSTlMAQCCQEMDvv4CgUJ8w8D/Pf2Bwr+DBeQyBAAAAV0lEQVR4Xl3KSRKDMAwFUeERzDik739VcFIVyX47tb78hM2J5YEcNJxUk4aRKprQL3y/KFReVARWMQbgssEBRVS4gd3930eiSvPyPWdUftOHhgh9GFryAI5YCDovJUNOAAAAAElFTkSuQmCC') !important;
+}
+.ul_profile a {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAP1BMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8XTy33AAAAFHRSTlMAgEA/fxDAMJC/0F+g759gUM/gcGmq2IIAAABjSURBVHheZc7XCgMxDETRsZSRy7aU+f9vDQQvCOc8XlDBH26PZCOGMr2g3ZJdUEFSfiEkGZ46OEM1M6JJNkPrvVd8JN4hIir4brhH3J2wozMvNUkxw3L29OTU+voAr5JcxOoLzlUHFk4saH4AAAAASUVORK5CYII=') !important;
+}
+.ul_magicgift div {
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAAp0lEQVQ4T2NkwAP+M/x3AEr/Z2RgPIhLGSM2CaDGBqB4PhBfhMobAOkJQINA4igAlwEHgKoagBpANAPUJSA+yEWoBgAlA6C2LYTKxANpkI0PgPgDVEwASCsA8QUgRlY3kRFoAEgRPxA3QhXXo9uCxkdW9wFkwH+oAnIMYBg1gGE0DIAJCJQOFgBpUPIlJyEtBGcmoCGgtA9L96A0jw+A8ggICAAz1wUAlGdVzw4sRHEAAAAASUVORK5CYII=') no-repeat 0 50% !important;
+}
+.ul_add a {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAASFBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP+oX8rvAAAAF3RSTlMAQMC/gCAwEFCwkNBgcKA/8N/gz4/vn2azJJAAAABpSURBVHhebcxbCgMxDENRxx4nmWff1f53WkdQPJTezwOSjNrF5dwCwFrCjtGRMBH0F+aA4oSZsAZgInTCkiBrwFU2M9zMBpSAXTZV3JXfNaBLTpoFPPwL9fkCe1cp1MxcCJn+hXKqBnwAa1sJgtTXkXEAAAAASUVORK5CYII=') !important;
+}
+.ul_poke a {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAATlBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8YK53/AAAAGXRSTlMAIGDg7zCgUBCAX0CQn8DQ8HDff7+wTz+vJ9MFiwAAAG9JREFUeF5tzlkOwyAQA1CbJSwhW3ff/6JF0DRVlfdna0YyztBN1xxxGFQ5/5Oby35DfRR0Rjv+FwOaUV+hFVGHW2sWVbYEwtsRValxy6Z9s+9Iya0EgjN9hwnz3YPT2jK8HozP/NJMdMlKWhJx7g0OXQkqVUZgugAAAABJRU5ErkJggg==') !important;
+}
+.ul_pm a {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAOVBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/j6oauAAAAEnRSTlMAQMC/EN9g8IDvX3Cg4FCwr3+Q97wbAAAAUUlEQVR4Xp3ISRaAIAwE0UabADKouf9h1Tg8Nm6oXX0MxHXu2gi0ql+1ASQk3BvkOpd2MJ4UIhGTg1P1C5gzIV7VwMj2ASPbF6xfYJm6CgY6AFxvBoV6P5bWAAAAAElFTkSuQmCC') !important;
+}
+
+/**
+ * [blockquote icon]
+ */
+.quote {
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAM1BMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/jQXrmAAAAEHRSTlMAQBCg0OAggDCw8M/vYJ+Q6Idm7QAAAEpJREFUeF6lzjkOgEAMQ1HHybAvvv9pGSMqRMdrvtwZHyY+I3rGTQ54SEBqmQevVS2xqwhLZU9pgFHNUcEQOh1ZeNqvGUaAYa/3F5mIBIf74tnvAAAAAElFTkSuQmCC') no-repeat 0 0;
+}
+.quote blockquote {
+	background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAMAAAAolt3jAAAAOVBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP/j6oauAAAAEnRSTlMAQD8QoDDfIOCfwM9g0K/v8IC/8R6ZAAAASUlEQVR4XqXIORLAIAxDURkbyL7o/oeNNXRJmddovvBiJTngRUAxwCi/MoVSJqU3jqpcsmYGpK/cEI27K45TNxkqGK9bg8Ervh5r6QU161OpEQAAAABJRU5ErkJggg==') no-repeat 100% 100%;
+}
+
+/**
+ * [Custom Icon]
+ */
+#profile .title a:before, #music .title span:before, #personalinfo .title a:before, #statistic .title span:before, #visitor .title span:before, #friend .title a:before, #wall .title a:before {
+	content: "";
+	width: 16px;
+	height: 16px;
+	display: inline-block;
+	margin-right: 4px;
+	vertical-align: sub;
+}
+#profile .title a:before {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAQlBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8aGWHeAAAAFXRSTlMAEIB/0FAgMO9w4MCgb0+P32DwkM+QvXngAAAAbElEQVR4Xm2PSQ7DQBACwbN7dxL+/9WMuqVWDqkLqMQF/IVHmhwM8ZYxYnC7uG2yyFhXzwUWWwXqJuWXTGQwJSIrfVwUdqmzSHLhtTBEbZq0GmJgl3aMEL2BROshpOs8L2/IFkEGn+WHJw4GX6iTC2z8JPSpAAAAAElFTkSuQmCC');
+}
+#music .title span:before {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAP1BMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8XTy33AAAAFHRSTlMAgEBQMKDP4GAgwHBf8I9PEO9v0EuHlEEAAABUSURBVHherY45FoAwCAXxQzbjLvc/q1CYR2HpNDDTAAVw8RBZtqyq0+urGjHoRyipSgj98BEC6JfAeZzFbqGd44/ZNhDUaO7sG7wXJkfMb4r0VIM94psFXsSjFe0AAAAASUVORK5CYII=');
+}
+#personalinfo .title a:before {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAP1BMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8XTy33AAAAFHRSTlMAgEA/fxDAMJC/0F+g759gUM/gcGmq2IIAAABjSURBVHheZc7XCgMxDETRsZSRy7aU+f9vDQQvCOc8XlDBH26PZCOGMr2g3ZJdUEFSfiEkGZ46OEM1M6JJNkPrvVd8JN4hIir4brhH3J2wozMvNUkxw3L29OTU+voAr5JcxOoLzlUHFk4saH4AAAAASUVORK5CYII=');
+}
+#statistic .title span:before {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAPFBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP+SO0ZQAAAAE3RSTlMAQMDfIDDgUKB/EK+AsNBPcM+fG+bCiQAAAIFJREFUeF5NjgsKxDAIBV80an7bz3r/u67bJqVDCDIyICB4IfGca75FruyC5B/3vgPWPcYUAnmoM7uOjFsEpmoApigCEAHynWLomYnyqeNJ7C/sSQx3Apti49qIWuVtJVKEKL6Z7FgJLATKdTvRdXlB0A71ztxdj4ZJKu4l4U1byx/2lgVLFAPC5QAAAABJRU5ErkJggg==');
+}
+#visitor .title span:before {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAMAAAAoLQ9TAAAAP1BMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP8XTy33AAAAFHRSTlMAwBBAgKDfIO8wYPBwkOB/UL+vnwm6F7sAAABiSURBVHhedc3rDsIwCEBhpLX3dVPP+z+rIZuGbHp+fhCQH+mT1DzcAbKDG0CQmkrzYM4fGMBUB9ohimywfN7sT6AeMKGJVBhihQfAqho7r2D7e2XV3O0M35INiwMkAlc49wbhrQj96sBI8QAAAABJRU5ErkJggg==');
+}
+#friend .title a:before {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAAMFBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP9iCewGAAAAD3RSTlMAYBB/MMDwz1Cg75CAX3CNGEWqAAAAWElEQVR4Xm3MsQmAMBQA0TMoCIKktjE7ZAEra4dwD91E3MQRXMVGSfXl+wubXPWqI1MRg4snuEX2Tp5AI18HlWH6URtW2BQJaBUeoBe57Ci3R2OcscqBXC8Jgy9AG1pRKwAAAABJRU5ErkJggg==');
+}
+#wall .title a:before {
+	background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQBAMAAADt3eJSAAAALVBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP//AP9qNfvlAAAADnRSTlMAgH9A8BAwcCBfYFCgwIAr+1IAAABJSURBVHhejcaxDYAgEEDRTwhoyQx21hfXoHEBR3AEZnEGF3EHS8MMiNde4asehmN6zeDrZ8Np0q8Mmp0x99wFVjkfWejChSJiaZnqMmtKxu+/AAAAAElFTkSuQmCC');
+}
+
+/**
+ * [member small avatar]
+ */
+.avt img {
+	padding: 1px !important;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+	border: 2px solid transparent !important;
+}
+.mls .avt img {
+	padding: 1px !important;
+	-webkit-transition-duration: .3s;
+	-moz-transition-duration: .3s;
+	-o-transition-duration: .3s;
+	-ms-transition-duration: .3s;
+	transition-duration: .3s;
+}
+.mls .avt img:hover {
+	-webkit-transform: scale(1.2);
+	-moz-transform: scale(1.2);
+	-o-transform: scale(1.2);
+	-ms-transform: scale(1.2);
+	transform: scale(1.2);
+}
+.mls li {
+	height: 69px;
+}
+
+/**
+ * [login tips]
+ */
+.pt.hm {
+	height: 60px !important;
+	line-height: 60px !important;
+}
+
+/**
+ * [profile page image effect]
+ */
+.pbm.mbm.bbda.cl img {
+	opacity: 0.4;
+	-webkit-transition-duration: .5s;
+	-moz-transition-duration: .5s;
+	-o-transition-duration: .5s;
+	-ms-transition-duration: .5s;
+	transition-duration: .5s;
+}
+.pbm.mbm.bbda.cl img:hover {
+	opacity: 1;
+	-webkit-transform: rotate(-360deg);
+	-moz-transform: rotate(-360deg);
+	-o-transform: rotate(-360deg);
+	-ms-transform: rotate(-360deg);
+	transform: rotate(-360deg);
+	-webkit-transition: background-color 0.3s ease;
+	-moz-transition: background-color 0.3s ease;
+	-o-transition: background-color 0.3s ease;
+	-ms-transition: background-color 0.3s ease;
+	transition: background-color 0.3s ease;
+}
+
+/**
+ * [album page]
+ */
+#ct .mlp, #ct .mla {
+	display: -webkit-flex !important;
+	display: -moz-flex !important;
+	display: -ms-flex !important;
+	display: flex !important;
+	-webkit-flex-wrap: wrap !important;
+	-moz-flex-wrap: wrap !important;
+	-ms-flex-wrap: wrap !important;
+	flex-wrap: wrap !important;
+	width: 950px;
+}
+.mla .c {
+	background: none !important;
+	width: auto !important;
+	height: 120px !important;
+}
+.mla .c a {
+	width: auto !important;
+}
+.mlp li, .mla li {
+	width: auto !important;
+	height: auto !important;
+	-webkit-flex: auto;
+	-moz-flex: auto;
+	-ms-flex: auto;
+	flex: auto;
+	margin: 5px;
+}
+.mlp img, .mla img {
+	height: 120px !important;
+	max-width: 936px !important;
+	border: none !important;
+}
+
+#photo_pic div {
+	opacity: 0.5;
+}
+
+.atd td {
+	padding: 30px 40px 10px !important;
+}
+
+/**
+ * [scrolltop button style]
+ */
+/*
+#scrolltop {
+	left: auto !important;
+	right: 50px !important;
+	right: calc(50% - 530px) !important;
+	width: 31px !important;
+	height: 31px !important;
+	bottom: 90px !important;
+	margin: 0 !important;
+	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPBAMAAAD0aukfAAAAGFBMVEUAAAD/abT/abT/abT/abT/abT/abT/abTew/HQAAAAB3RSTlMAv0BggCAwj0XrPAAAAEdJREFUeF5tyLENwCAMBVFLEQNkhUzgjjYdLWICmMHFXx8sfSwKrjo98ZJEWfc9sEBANwIWuJjoTCQ7ksfLutwrYP+57WN1AlJiG/dpk12gAAAAAElFTkSuQmCC') no-repeat 50% 50% !important;
+	border: 3px solid #FF69B4;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+#scrolltop:hover {
+	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPBAMAAAD0aukfAAAAGFBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP+50IfHAAAAB3RSTlMAv0BggCAwj0XrPAAAAEdJREFUeF5tyLENwCAMBVFLEQNkhUzgjjYdLWICmMHFXx8sfSwKrjo98ZJEWfc9sEBANwIWuJjoTCQ7ksfLutwrYP+57WN1AlJiG/dpk12gAAAAAElFTkSuQmCC') no-repeat 50% 50% !important;
+}
+*/
+#scrolltop {
+	left: auto !important;
+	right: 50px !important;
+	right: calc(50% - 530px) !important;
+	width: 32px !important;
+	height: 32px !important;
+	bottom: 90px !important;
+	margin: 0 !important;
+	background: none !important;
+	border: 3px solid #FF69B4;
+	-webkit-border-radius: 50%;
+	border-radius: 50%;
+}
+#scrolltop:before {
+	content: "";
+	width: 0;
+	height: 0;
+	display: block;
+	position: absolute;
+	top: -3px;
+	left: 6px;
+	border-width: 10px;
+	border-style: solid;
+	border-color: transparent transparent #FF69B4 transparent;
+}
+#scrolltop:after {
+	content: "";
+	width: 20px;
+	height: 3px;
+	display: block;
+	position: absolute;
+	top: 20px;
+	left: 6px;
+	background: #FF69B4;
+}
+#scrolltop:hover {
+	border: 3px solid #F0F;
+}
+#scrolltop:hover::before {
+	border-color: transparent transparent #F0F transparent;
+}
+#scrolltop:hover::after {
+	background: #F0F;
+}
+
+
+/**
+ * [Custom Style]
+ */
+textarea:focus, input:focus {
+	outline: none !important;
+}
+
+#blog82 {
+	text-align: center;
+}
+
+.tl #delform {
+	pointer-events: none !important;
+}
+
+.mn .bm.bbda {
+	color: #C00 !important;
+	font-weight: bold !important;
+}
+
+.atd .atdc {
+	filter: alpha(opacity=60);
+	opacity: 0.6;
+}
+
+/**
+ * [Page Style]
+ */
+/*
+.pg strong {
+	background-color: rgba(255, 0, 255, 0.7) !important;
+}
+.pg a {
+	color: #F0F !important;
+}
+.pg a:hover {
+	background-color: rgba(255, 0, 255, 0.7) !important;
+	color: #FFF !important;
+	-webkit-transition: all 1s ease;
+	-moz-transition: all 1s ease;
+	-o-transition: all 1s ease;
+	-ms-transition: all 1s ease;
+	transition: all 1s ease;
+	text-shadow: none;
+}
+*/
+/**
+ * [scrollbar]
+ */
+::-webkit-scrollbar {
+	width: 9px;
+	height: 9px;
+}
+::-webkit-scrollbar-thumb {
+	background: #FF69B4;
+}
+::-webkit-scrollbar-thumb:hover, .t_l, .t_c, .t_r, .m_l, .m_r, .b_l, .b_c, .b_r {
+	background: #F0F !important;
+}
+::-webkit-scrollbar-button {
+	height: 0;
+	width: 0;
+}
+::-webkit-scrollbar-track-piece {
+	background: #DFDFDF;
+}
+
+/**
+ * test style
+ */
+/*
+#space:before {
+	content: "\4F60\4EEC\59B9\59B9\7684\FF01\FF01";
+	position: absolute;
+	top: 132px;
+	left: 48px;
+	padding-right: 10px;
+	color: #000;
+	font-weight: bold;
+	height: 0px;
+	border: 15px solid #FFA200;
+	border-right-color: rgba(0, 0, 0, 0);
+	line-height: 0px;
+	box-shadow: -0px 5px 5px -5px #000;
+	z-index: 1;
+}
+
+#space:before, #append_parent:before, #hd:before, #nv:before, #profile .blocktitle:before, #diypage:before, #frame1:before, #frame1_left:before, #profile:before, #music:before, #music_content:before, #personalinfo:before, #personalinfo_content:before, #statistic:before, #statistic_content:before, #visitor:before, #visitor_content:before, #friend:before, #friend_content:before, #frame1_center:before, #wall:before, #wall_content:before, #comment_ul:before, #scrolltop:before, #music .blocktitle:before {
+	content: "\266c";
+	height: 16px;
+	width: 16px;
+	position: fixed;
+	top: -20px;
+	left: -20px;
+	color: rgba(255, 0, 255, .7);
+	font-size: 16px;
+	font-family: Arial;
+	text-shadow: 0px 0px 5px #fff;
+}
+#space:after, #append_parent:after, #hd:after, #nv:after, #profile .blocktitle:after, #diypage:after, #frame1:after, #frame1_left:after, #profile:after, #music:after, #music_content:after, #personalinfo:after, #personalinfo_content:after, #statistic:after, #statistic_content:after, #visitor:after, #visitor_content:after, #friend:after, #friend_content:after, #frame1_center:after, #wall:after, #wall_content:after, #comment_ul:after, #scrolltop:after, #music .blocktitle:after {
+	content: "\266a";
+	height: 16px;
+	width: 16px;
+	position: fixed;
+	top: -20px;
+	left: -20px;
+	color: rgba(255, 0, 255, .7);
+	font-size: 16px;
+	font-family: Arial;
+	text-shadow: 0px 0px 5px #fff;
+}
+@-webkit-keyframes fall {
+	0% {
+		left: -10%;
+	}
+	100% {
+		left: 110%;
+	};
+}
+@-webkit-keyframes snow {
+	0% {
+		top: -50px;
+	}
+	100% {
+		top: 50px;
+	};
+}
+@-moz-keyframes fall {
+	0% {
+		left: -10%;
+	}
+	100% {
+		left: 110%;
+	};
+}
+@-moz-keyframes snow {
+	0% {
+		top: -50px;
+	}
+	100% {
+		top: 50px;
+	};
+}
+@-ms-keyframes fall {
+	0% {
+		left: -10%;
+	}
+	100% {
+		left: 110%;
+	};
+}
+@-ms-keyframes snow {
+	0% {
+		top: -50px;
+	}
+	100% {
+		top: 50px;
+	};
+}
+#space:before {
+	margin-top: 53%;
+	-webkit-animation: fall ease-in 25s 2.4s infinite, snow 8.8s both infinite alternate;
+	-moz-animation: fall ease-in 25s 2.4s infinite, snow 8.8s both infinite alternate;
+	-ms-animation: fall ease-in 25s 2.4s infinite, snow 8.8s both infinite alternate;
+}
+#append_parent:before {
+	margin-top: 15%;
+	-webkit-animation: fall ease-in 21s 7.8s infinite, snow 6.8s both infinite alternate;
+	-moz-animation: fall ease-in 21s 7.8s infinite, snow 6.8s both infinite alternate;
+	-ms-animation: fall ease-in 21s 7.8s infinite, snow 6.8s both infinite alternate;
+}
+#hd:before {
+	margin-top: 29%;
+	-webkit-animation: fall ease-in 19s 5.8s infinite, snow 9.4s both infinite alternate;
+	-moz-animation: fall ease-in 19s 5.8s infinite, snow 9.4s both infinite alternate;
+	-ms-animation: fall ease-in 19s 5.8s infinite, snow 9.4s both infinite alternate;
+}
+#nv:before {
+	margin-top: 24%;
+	-webkit-animation: fall ease-in 18.2s 6.4s infinite, snow 8.2s both infinite alternate;
+	-moz-animation: fall ease-in 18.2s 6.4s infinite, snow 8.2s both infinite alternate;
+	-ms-animation: fall ease-in 18.2s 6.4s infinite, snow 8.2s both infinite alternate;
+}
+#profile .blocktitle:before {
+	margin-top: 55%;
+	-webkit-animation: fall ease-in 22s 0.4s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 22s 0.4s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 22s 0.4s infinite, snow 7s both infinite alternate;
+}
+#diypage:before {
+	margin-top: 91%;
+	-webkit-animation: fall ease-in 22.4s 1.4s infinite, snow 9.6s both infinite alternate;
+	-moz-animation: fall ease-in 22.4s 1.4s infinite, snow 9.6s both infinite alternate;
+	-ms-animation: fall ease-in 22.4s 1.4s infinite, snow 9.6s both infinite alternate;
+}
+#frame1:before {
+	margin-top: 66%;
+	-webkit-animation: fall ease-in 19.6s 6.2s infinite, snow 7.6s both infinite alternate;
+	-moz-animation: fall ease-in 19.6s 6.2s infinite, snow 7.6s both infinite alternate;
+	-ms-animation: fall ease-in 19.6s 6.2s infinite, snow 7.6s both infinite alternate;
+}
+#frame1_left:before {
+	margin-top: 80%;
+	-webkit-animation: fall ease-in 24.8s 1.4s infinite, snow 9.8s both infinite alternate;
+	-moz-animation: fall ease-in 24.8s 1.4s infinite, snow 9.8s both infinite alternate;
+	-ms-animation: fall ease-in 24.8s 1.4s infinite, snow 9.8s both infinite alternate;
+}
+#profile:before {
+	margin-top: 81%;
+	-webkit-animation: fall ease-in 25.8s 5.2s infinite, snow 8s both infinite alternate;
+	-moz-animation: fall ease-in 25.8s 5.2s infinite, snow 8s both infinite alternate;
+	-ms-animation: fall ease-in 25.8s 5.2s infinite, snow 8s both infinite alternate;
+}
+#music:before {
+	margin-top: 26%;
+	-webkit-animation: fall ease-in 18.2s 5.6s infinite, snow 9.6s both infinite alternate;
+	-moz-animation: fall ease-in 18.2s 5.6s infinite, snow 9.6s both infinite alternate;
+	-ms-animation: fall ease-in 18.2s 5.6s infinite, snow 9.6s both infinite alternate;
+}
+#music_content:before {
+	margin-top: 6%;
+	-webkit-animation: fall ease-in 20.4s 7.2s infinite, snow 7.8s both infinite alternate;
+	-moz-animation: fall ease-in 20.4s 7.2s infinite, snow 7.8s both infinite alternate;
+	-ms-animation: fall ease-in 20.4s 7.2s infinite, snow 7.8s both infinite alternate;
+}
+#personalinfo:before {
+	margin-top: 21%;
+	-webkit-animation: fall ease-in 24.6s 3.8s infinite, snow 8.2s both infinite alternate;
+	-moz-animation: fall ease-in 24.6s 3.8s infinite, snow 8.2s both infinite alternate;
+	-ms-animation: fall ease-in 24.6s 3.8s infinite, snow 8.2s both infinite alternate;
+}
+#personalinfo_content:before {
+	margin-top: 24%;
+	-webkit-animation: fall ease-in 26s 1.8s infinite, snow 9.4s both infinite alternate;
+	-moz-animation: fall ease-in 26s 1.8s infinite, snow 9.4s both infinite alternate;
+	-ms-animation: fall ease-in 26s 1.8s infinite, snow 9.4s both infinite alternate;
+}
+#statistic:before {
+	margin-top: 45%;
+	-webkit-animation: fall ease-in 18.2s 3.6s infinite, snow 9s both infinite alternate;
+	-moz-animation: fall ease-in 18.2s 3.6s infinite, snow 9s both infinite alternate;
+	-ms-animation: fall ease-in 18.2s 3.6s infinite, snow 9s both infinite alternate;
+}
+#statistic_content:before {
+	margin-top: 29%;
+	-webkit-animation: fall ease-in 23s 2.4s infinite, snow 8s both infinite alternate;
+	-moz-animation: fall ease-in 23s 2.4s infinite, snow 8s both infinite alternate;
+	-ms-animation: fall ease-in 23s 2.4s infinite, snow 8s both infinite alternate;
+}
+#visitor:before {
+	margin-top: 37%;
+	-webkit-animation: fall ease-in 21.6s 6.4s infinite, snow 7.6s both infinite alternate;
+	-moz-animation: fall ease-in 21.6s 6.4s infinite, snow 7.6s both infinite alternate;
+	-ms-animation: fall ease-in 21.6s 6.4s infinite, snow 7.6s both infinite alternate;
+}
+#visitor_content:before {
+	margin-top: 53%;
+	-webkit-animation: fall ease-in 25.4s 0.8s infinite, snow 7.4s both infinite alternate;
+	-moz-animation: fall ease-in 25.4s 0.8s infinite, snow 7.4s both infinite alternate;
+	-ms-animation: fall ease-in 25.4s 0.8s infinite, snow 7.4s both infinite alternate;
+}
+#friend:before {
+	margin-top: 18%;
+	-webkit-animation: fall ease-in 22s 6s infinite, snow 8s both infinite alternate;
+	-moz-animation: fall ease-in 22s 6s infinite, snow 8s both infinite alternate;
+	-ms-animation: fall ease-in 22s 6s infinite, snow 8s both infinite alternate;
+}
+#friend_content:before {
+	margin-top: 30%;
+	-webkit-animation: fall ease-in 21s 7.8s infinite, snow 8s both infinite alternate;
+	-moz-animation: fall ease-in 21s 7.8s infinite, snow 8s both infinite alternate;
+	-ms-animation: fall ease-in 21s 7.8s infinite, snow 8s both infinite alternate;
+}
+#frame1_center:before {
+	margin-top: 56%;
+	-webkit-animation: fall ease-in 24.2s 7.4s infinite, snow 8s both infinite alternate;
+	-moz-animation: fall ease-in 24.2s 7.4s infinite, snow 8s both infinite alternate;
+	-ms-animation: fall ease-in 24.2s 7.4s infinite, snow 8s both infinite alternate;
+}
+#wall:before {
+	margin-top: 33%;
+	-webkit-animation: fall ease-in 19.6s 1.6s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 19.6s 1.6s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 19.6s 1.6s infinite, snow 7s both infinite alternate;
+}
+#wall_content:before {
+	margin-top: 18%;
+	-webkit-animation: fall ease-in 24.6s 7.2s infinite, snow 9.8s both infinite alternate;
+	-moz-animation: fall ease-in 24.6s 7.2s infinite, snow 9.8s both infinite alternate;
+	-ms-animation: fall ease-in 24.6s 7.2s infinite, snow 9.8s both infinite alternate;
+}
+#comment_ul:before {
+	margin-top: 60%;
+	-webkit-animation: fall ease-in 19s 0.4s infinite, snow 9.8s both infinite alternate;
+	-moz-animation: fall ease-in 19s 0.4s infinite, snow 9.8s both infinite alternate;
+	-ms-animation: fall ease-in 19s 0.4s infinite, snow 9.8s both infinite alternate;
+}
+#scrolltop:before {
+	margin-top: 86%;
+	-webkit-animation: fall ease-in 25s 0.4s infinite, snow 8.6s both infinite alternate;
+	-moz-animation: fall ease-in 25s 0.4s infinite, snow 8.6s both infinite alternate;
+	-ms-animation: fall ease-in 25s 0.4s infinite, snow 8.6s both infinite alternate;
+}
+#music .blocktitle:before {
+	margin-top: 15%;
+	-webkit-animation: fall ease-in 24.4s 1.2s infinite, snow 8.4s both infinite alternate;
+	-moz-animation: fall ease-in 24.4s 1.2s infinite, snow 8.4s both infinite alternate;
+	-ms-animation: fall ease-in 24.4s 1.2s infinite, snow 8.4s both infinite alternate;
+}
+#space:after {
+	margin-top: 98%;
+	-webkit-animation: fall ease-in 25.2s 7s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 25.2s 7s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 25.2s 7s infinite, snow 7s both infinite alternate;
+}
+#append_parent:after {
+	margin-top: 16%;
+	-webkit-animation: fall ease-in 19.4s 6.4s infinite, snow 7.6s both infinite alternate;
+	-moz-animation: fall ease-in 19.4s 6.4s infinite, snow 7.6s both infinite alternate;
+	-ms-animation: fall ease-in 19.4s 6.4s infinite, snow 7.6s both infinite alternate;
+}
+#hd:after {
+	margin-top: 99%;
+	-webkit-animation: fall ease-in 20.4s 3s infinite, snow 7.6s both infinite alternate;
+	-moz-animation: fall ease-in 20.4s 3s infinite, snow 7.6s both infinite alternate;
+	-ms-animation: fall ease-in 20.4s 3s infinite, snow 7.6s both infinite alternate;
+}
+#nv:after {
+	margin-top: 44%;
+	-webkit-animation: fall ease-in 24.8s 3s infinite, snow 8.6s both infinite alternate;
+	-moz-animation: fall ease-in 24.8s 3s infinite, snow 8.6s both infinite alternate;
+	-ms-animation: fall ease-in 24.8s 3s infinite, snow 8.6s both infinite alternate;
+}
+#profile .blocktitle:after {
+	margin-top: 85%;
+	-webkit-animation: fall ease-in 23.6s 4.4s infinite, snow 10s both infinite alternate;
+	-moz-animation: fall ease-in 23.6s 4.4s infinite, snow 10s both infinite alternate;
+	-ms-animation: fall ease-in 23.6s 4.4s infinite, snow 10s both infinite alternate;
+}
+#diypage:after {
+	margin-top: 14%;
+	-webkit-animation: fall ease-in 18.4s 2.6s infinite, snow 9s both infinite alternate;
+	-moz-animation: fall ease-in 18.4s 2.6s infinite, snow 9s both infinite alternate;
+	-ms-animation: fall ease-in 18.4s 2.6s infinite, snow 9s both infinite alternate;
+}
+#frame1:after {
+	margin-top: 36%;
+	-webkit-animation: fall ease-in 23.6s 1.8s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 23.6s 1.8s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 23.6s 1.8s infinite, snow 7s both infinite alternate;
+}
+#frame1_left:after {
+	margin-top: 1%;
+	-webkit-animation: fall ease-in 19.6s 1.2s infinite, snow 6.8s both infinite alternate;
+	-moz-animation: fall ease-in 19.6s 1.2s infinite, snow 6.8s both infinite alternate;
+	-ms-animation: fall ease-in 19.6s 1.2s infinite, snow 6.8s both infinite alternate;
+}
+#profile:after {
+	margin-top: 54%;
+	-webkit-animation: fall ease-in 22s 2.4s infinite, snow 7.2s both infinite alternate;
+	-moz-animation: fall ease-in 22s 2.4s infinite, snow 7.2s both infinite alternate;
+	-ms-animation: fall ease-in 22s 2.4s infinite, snow 7.2s both infinite alternate;
+}
+#music:after {
+	margin-top: 11%;
+	-webkit-animation: fall ease-in 22.2s 4.4s infinite, snow 7.8s both infinite alternate;
+	-moz-animation: fall ease-in 22.2s 4.4s infinite, snow 7.8s both infinite alternate;
+	-ms-animation: fall ease-in 22.2s 4.4s infinite, snow 7.8s both infinite alternate;
+}
+#music_content:after {
+	margin-top: 90%;
+	-webkit-animation: fall ease-in 25.4s 0.8s infinite, snow 9.8s both infinite alternate;
+	-moz-animation: fall ease-in 25.4s 0.8s infinite, snow 9.8s both infinite alternate;
+	-ms-animation: fall ease-in 25.4s 0.8s infinite, snow 9.8s both infinite alternate;
+}
+#personalinfo:after {
+	margin-top: 85%;
+	-webkit-animation: fall ease-in 25.8s 2.6s infinite, snow 8.4s both infinite alternate;
+	-moz-animation: fall ease-in 25.8s 2.6s infinite, snow 8.4s both infinite alternate;
+	-ms-animation: fall ease-in 25.8s 2.6s infinite, snow 8.4s both infinite alternate;
+}
+#personalinfo_content:after {
+	margin-top: 78%;
+	-webkit-animation: fall ease-in 23.2s 2.2s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 23.2s 2.2s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 23.2s 2.2s infinite, snow 7s both infinite alternate;
+}
+#statistic:after {
+	margin-top: 8%;
+	-webkit-animation: fall ease-in 21.6s 8s infinite, snow 8.4s both infinite alternate;
+	-moz-animation: fall ease-in 21.6s 8s infinite, snow 8.4s both infinite alternate;
+	-ms-animation: fall ease-in 21.6s 8s infinite, snow 8.4s both infinite alternate;
+}
+#statistic_content:after {
+	margin-top: 49%;
+	-webkit-animation: fall ease-in 24.6s 7.6s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 24.6s 7.6s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 24.6s 7.6s infinite, snow 7s both infinite alternate;
+}
+#visitor:after {
+	margin-top: 45%;
+	-webkit-animation: fall ease-in 18.6s 7s infinite, snow 9.6s both infinite alternate;
+	-moz-animation: fall ease-in 18.6s 7s infinite, snow 9.6s both infinite alternate;
+	-ms-animation: fall ease-in 18.6s 7s infinite, snow 9.6s both infinite alternate;
+}
+#visitor_content:after {
+	margin-top: 74%;
+	-webkit-animation: fall ease-in 19.8s 5.2s infinite, snow 7.2s both infinite alternate;
+	-moz-animation: fall ease-in 19.8s 5.2s infinite, snow 7.2s both infinite alternate;
+	-ms-animation: fall ease-in 19.8s 5.2s infinite, snow 7.2s both infinite alternate;
+}
+#friend:after {
+	margin-top: 56%;
+	-webkit-animation: fall ease-in 21s 5.8s infinite, snow 6.4s both infinite alternate;
+	-moz-animation: fall ease-in 21s 5.8s infinite, snow 6.4s both infinite alternate;
+	-ms-animation: fall ease-in 21s 5.8s infinite, snow 6.4s both infinite alternate;
+}
+#friend_content:after {
+	margin-top: 64%;
+	-webkit-animation: fall ease-in 23.8s 6s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 23.8s 6s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 23.8s 6s infinite, snow 7s both infinite alternate;
+}
+#frame1_center:after {
+	margin-top: 25%;
+	-webkit-animation: fall ease-in 24.2s 6.8s infinite, snow 7.8s both infinite alternate;
+	-moz-animation: fall ease-in 24.2s 6.8s infinite, snow 7.8s both infinite alternate;
+	-ms-animation: fall ease-in 24.2s 6.8s infinite, snow 7.8s both infinite alternate;
+}
+#wall:after {
+	margin-top: 21%;
+	-webkit-animation: fall ease-in 18.6s 2.2s infinite, snow 7.2s both infinite alternate;
+	-moz-animation: fall ease-in 18.6s 2.2s infinite, snow 7.2s both infinite alternate;
+	-ms-animation: fall ease-in 18.6s 2.2s infinite, snow 7.2s both infinite alternate;
+}
+#wall_content:after {
+	margin-top: 58%;
+	-webkit-animation: fall ease-in 19.8s 5.8s infinite, snow 9.6s both infinite alternate;
+	-moz-animation: fall ease-in 19.8s 5.8s infinite, snow 9.6s both infinite alternate;
+	-ms-animation: fall ease-in 19.8s 5.8s infinite, snow 9.6s both infinite alternate;
+}
+#comment_ul:after {
+	margin-top: 80%;
+	-webkit-animation: fall ease-in 23.2s 5s infinite, snow 8.4s both infinite alternate;
+	-moz-animation: fall ease-in 23.2s 5s infinite, snow 8.4s both infinite alternate;
+	-ms-animation: fall ease-in 23.2s 5s infinite, snow 8.4s both infinite alternate;
+}
+#scrolltop:after {
+	margin-top: 75%;
+	-webkit-animation: fall ease-in 21.2s 1.8s infinite, snow 9.2s both infinite alternate;
+	-moz-animation: fall ease-in 21.2s 1.8s infinite, snow 9.2s both infinite alternate;
+	-ms-animation: fall ease-in 21.2s 1.8s infinite, snow 9.2s both infinite alternate;
+}
+#music .blocktitle:after {
+	margin-top: 62%;
+	-webkit-animation: fall ease-in 26s 5.4s infinite, snow 7s both infinite alternate;
+	-moz-animation: fall ease-in 26s 5.4s infinite, snow 7s both infinite alternate;
+	-ms-animation: fall ease-in 26s 5.4s infinite, snow 7s both infinite alternate;
+}
+**/
