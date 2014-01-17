@@ -1,7 +1,7 @@
 /**
  * PCBETA Space Style
  * Author by aa65535
- * LastModified 2013-12-08 00:11:37
+ * LastModified 2014-01-17 22:59:53
  */
 
 /**
@@ -26,6 +26,7 @@ body {
 	background: transparent url('http://static.pb.pbcdn.com/data/attachment/album/201208/26/0208028n00tc70vvzc6umk.png') no-repeat 0 19px !important;
 	height: 115px !important;
 	text-shadow: none;
+	position: relative !important;
 }
 
 /**
@@ -160,6 +161,8 @@ html.ie5 #space, html.ie6 #space, html.ie7 #space, html.ie8 #space, html.ie9 #sp
 #nv {
 	left: 0 !important;
 	padding-left: 0 !important;
+	position: absolute !important;
+	bottom: 0 !important;
 }
 #nv li {
 	background: rgba(255, 255, 255, 0.6) !important;
@@ -230,7 +233,7 @@ td.m_c, .p_pop.facel {
 /**
  * [clear background]
  */
-.o.pns, .ct2 .mn, .mm, .bm, .tedt .area, textarea, input, button, #pcd .hm img, #comment dt,.pt.hm, .mlp img {
+.o.pns, .ct2 .mn, .mm, .bm, .tedt .area, textarea, input, button, #pcd .hm img, #comment dt,.pt.hm, .mlp img, .frame, .frame-tab {
 	background: none !important;
 }
 
@@ -1022,3 +1025,6 @@ textarea:focus, input:focus {
 	-ms-animation: fall ease-in 26s 5.4s infinite, snow 7s both infinite alternate;
 }
 **/
+/*
+spacecss=&style=t3&layoutdata=<?xml+version="1.0"+encoding="ISO-8859-1"?><root><item+id="diypage"><item+id="frame`frame1"><item+id="attr"><item+id="name"><![CDATA[frame1]]></item><item+id="moveable"><![CDATA[false]]></item><item+id="className"><![CDATA[frame+cl]]></item><item+id="titles"></item></item><item+id="column`frame1_left"><item+id="attr"><item+id="name"><![CDATA[frame1_left]]></item><item+id="className"><![CDATA[z+column]]></item></item><item+id="block`profile"><item+id="attr"><item+id="name"><![CDATA[profile]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[果照什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=profile]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`music"><item+id="attr"><item+id="name"><![CDATA[music]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[他妹的音乐更好听]]></item><item+id="href"><![CDATA[]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`personalinfo"><item+id="attr"><item+id="name"><![CDATA[personalinfo]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[个人资料什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=profile]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="1"><item+id="text"><![CDATA[编辑我的资料]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=spacecp&ac=profile]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[y+xw0]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`statistic"><item+id="attr"><item+id="name"><![CDATA[statistic]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[统计信息什么的]]></item><item+id="href"><![CDATA[]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`visitor"><item+id="attr"><item+id="name"><![CDATA[visitor]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[最近来串门的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=friend&view=visitor]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`friend"><item+id="attr"><item+id="name"><![CDATA[friend]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[好基友什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=friend&view=me&from=space]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item></item><item+id="column`frame1_center"><item+id="attr"><item+id="name"><![CDATA[frame1_center]]></item><item+id="className"><![CDATA[z+column]]></item></item><item+id="block`wall"><item+id="attr"><item+id="name"><![CDATA[wall]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[留言板什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=wall]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="1"><item+id="text"><![CDATA[全部]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=wall]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[y+xw0]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item></item></item></item></root>&currentlayout=2:2&formhash=bacce895&diysubmit=true
+*/
