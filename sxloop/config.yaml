@@ -1,10 +1,18 @@
 name: sxloop
 version: 1
 cron:
-- description: cron
-  url: sxloop.php
-  schedule: every 10 mins
-  timezone: Beijing
+  - description: cron0
+    url: sxloop.php
+    schedule: every 10 mins
+    timezone: Beijing
+  - description: cron1
+    url: bilibili.php
+    schedule: every 5 mins
+    timezone: Beijing
+  - description: cron2
+    url: pcbeta.php
+    schedule: every day of month 00:30
+    timezone: Beijing
 handle:
-- compress:  if ( out_header["Content-type"] ~ "text/css" ) compress
-- compress:  if ( out_header["Content-type"] ~ "text/html" ) compress
+  - compress:  if ( out_header["Content-type"] ~ "text/css" ) compress
+  - compress:  if ( out_header["Content-type"] ~ "text/html" ) compress

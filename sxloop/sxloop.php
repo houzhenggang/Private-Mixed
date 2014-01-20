@@ -1,20 +1,18 @@
 <?php
+require_once './http.php';
 // POST函数
 function sxloop($array, $isvip = 0) {
 	$times = 0;
 	$host = !$isvip ? 'login3.reg2t.sandai.net' : 'loginvip.client.reg2t.sandai.net';
 	for ($i = 0, $n = count($array); $i < $n; $i++) {
-		$ch = curl_init();
-		curl_setopt($ch, CURLOPT_URL, $host);
-		curl_setopt($ch, CURLOPT_HEADER, 0);
-		curl_setopt($ch, CURLOPT_RETURNTRANSFER, 1);
-		curl_setopt($ch, CURLOPT_POST, 1);
-		curl_setopt($ch, CURLOPT_TIMEOUT, 5);
-		curl_setopt($ch, CURLOPT_USERAGENT, '');
-		curl_setopt($ch, CURLOPT_HTTPHEADER, array('Content-Type:', 'Connection:Close'));
-		curl_setopt($ch, CURLOPT_POSTFIELDS, file_get_contents($array[$i]));
-		curl_exec($ch);
-		curl_close($ch);
+		http_post(
+			$host,
+			false,
+			array(
+				'Content-Type:', 'Connection:Close'
+			),
+			file_get_contents($array[$i])
+		);
 		$times++;
 	}
 	return $times;
