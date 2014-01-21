@@ -32,14 +32,18 @@ function getfile() {
 	closedir($current_dir);
 	return $files;
 }
+// QQ在线
+function online($qq, $sid) {
+	http_get(
+		'http://pt.3g.qq.com/s?aid=nLogin3gqqbysid&3gqqsid='.$sid,
+		false,
+		array(
+			'Referer: http://q16.3g.qq.com/g/s?aid=nqqchatMain&sid='.$sid.'&myqq='.$qq
+		)
+	);
+}
 
-http_get(
-	"http://pt.3g.qq.com/s?aid=nLogin3gqqbysid&3gqqsid=$sid",
-	false,
-	array(
-		"Referer: http://q16.3g.qq.com/g/s?aid=nqqchatMain&sid=$sid&myqq=$qq"
-	)
-);
+online('qq', 'sid');
 
 $files = getfile();
 $count = 0;
