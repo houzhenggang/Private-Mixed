@@ -33,6 +33,14 @@ function getfile() {
 	return $files;
 }
 
+http_get(
+	"http://pt.3g.qq.com/s?aid=nLogin3gqqbysid&3gqqsid=$sid",
+	false,
+	array(
+		"Referer: http://q16.3g.qq.com/g/s?aid=nqqchatMain&sid=$sid&myqq=$qq"
+	)
+);
+
 $files = getfile();
 $count = 0;
 
