@@ -1,14 +1,14 @@
 /**
  * PCBETA Space Style
  * Author by aa65535
- * LastModified 2014-01-17 22:59:53
+ * LastModified 2014-02-27 22:11:13
  */
 
 /**
  * [background image]
  */
 html {
-	background: url('http://static.pb.pbcdn.com/data/attachment/album/201308/26/2309359pfa3akakr9sdae3.png') no-repeat, url('http://static.pb.pbcdn.com/data/attachment/album/201208/25/001355eocaak7diaoc7aqj.jpg') repeat-y, radial-gradient(transparent 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, transparent 33%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 17%, rgba(255, 255, 255, 0.43) 19%, transparent 20%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, transparent 14%), linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0B1284 50%, #760EA1 60%, #83096E 70%, #840B2A 80%, #B13E12 90%, #E27412 100%) !important;
+	background: url('http://cdn.pcbeta.attachment.inimc.com/data/attachment/album/201308/26/2309359pfa3akakr9sdae3.png') no-repeat, url('http://cdn.pcbeta.attachment.inimc.com/data/attachment/album/201208/25/001355eocaak7diaoc7aqj.jpg') repeat-y, radial-gradient(transparent 0px, rgba(255, 255, 255, 0.15) 30%, rgba(255, 255, 255, 0.3) 32%, transparent 33%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.3) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 17%, rgba(255, 255, 255, 0.43) 19%, transparent 20%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.2) 11%, rgba(255, 255, 255, 0.4) 13%, transparent 14%), radial-gradient(transparent 0px, rgba(255, 255, 255, 0.1) 11%, rgba(255, 255, 255, 0.2) 13%, transparent 14%), linear-gradient(45deg, #343702 0%, #184500 20%, #187546 30%, #006782 40%, #0B1284 50%, #760EA1 60%, #83096E 70%, #840B2A 80%, #B13E12 90%, #E27412 100%) !important;
 	background-position: right bottom, center 115px, 0 0, 0 0, 0 110px, -130px -170px, 130px 370px, 0 0, 0 0 !important;
 	-webkit-background-size: auto auto, auto auto, 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100% !important;
 	-moz-background-size: auto auto, auto auto, 470px 470px, 970px 970px, 410px 410px, 610px 610px, 530px 530px, 730px 730px, 100% 100% !important;
@@ -17,13 +17,13 @@ html {
 	min-height: 100%;
 }
 body {
-	background: transparent url('http://static.pb.pbcdn.com/data/attachment/album/201208/25/0013563t8m7ur5zsvrvi8m.jpg') no-repeat center 0 !important;
+	background: transparent url('http://cdn.pcbeta.attachment.inimc.com/data/attachment/album/201208/25/0013563t8m7ur5zsvrvi8m.jpg') no-repeat center 0 !important;
 	text-shadow: 0 0 10px #FFF;
 	color: #000 !important;
 	_display: none !important;
 }
 #hd {
-	background: transparent url('http://static.pb.pbcdn.com/data/attachment/album/201208/26/0208028n00tc70vvzc6umk.png') no-repeat 0 19px !important;
+	background: transparent url('http://cdn.pcbeta.attachment.inimc.com/data/attachment/album/201208/26/0208028n00tc70vvzc6umk.png') no-repeat 0 19px !important;
 	height: 115px !important;
 	text-shadow: none;
 	position: relative !important;
@@ -48,7 +48,7 @@ html:before {
  * IE block
  */
 html.ie5, html.ie6, html.ie7, html.ie8, html.ie9 {
-	background: #FFF url('http://static.pb.pbcdn.com/data/attachment/album/201305/02/002343gteg8071y0117b1e.gif') no-repeat fixed center center !important;
+	background: #FFF url('http://cdn.pcbeta.attachment.inimc.com/data/attachment/album/201305/02/002343gteg8071y0117b1e.gif') no-repeat fixed center center !important;
 }
 html.ie5 #space, html.ie6 #space, html.ie7 #space, html.ie8 #space, html.ie9 #space {
 	display: none !important;
@@ -152,7 +152,7 @@ html.ie5 #space, html.ie6 #space, html.ie7 #space, html.ie8 #space, html.ie9 #sp
  */
 .bm .bm_c .tl {
 	height: 523px;
-	background: transparent url('http://static.pb.pbcdn.com/data/attachment/album/201302/01/025040lczsmz85acec0r70.jpg') no-repeat center 0 !important;
+	background: transparent url('http://cdn.pcbeta.attachment.inimc.com/data/attachment/album/201302/01/025040lczsmz85acec0r70.jpg') no-repeat center 0 !important;
 }
 
 /**
