@@ -1,7 +1,7 @@
 /**
  * PCBETA Space Style
  * Author by aa65535
- * LastModified 2014-02-27 22:11:13
+ * LastModified 2014-04-10 02:50:59
  */
 
 /**
@@ -262,7 +262,7 @@ button, .pt, .mla li, .mlp li {
 /**
  * [hide elements]
  */
-#toptb, .hm .mbn, .md_ctrl, .focus, .ct2 .sd, #spaceinfoshow, .xg2, .gol, iframe, .ct_vw_sd, .tl #delform, #radio, #wall .title .y {
+#toptb, .hm .mbn, .md_ctrl, .focus, .ct2 .sd, #spaceinfoshow, .xg2, .gol, iframe, .ct_vw_sd, .tl #delform, #radio, #wall .title .y, #weixinqr {
 	display: none !important;
 }
 
