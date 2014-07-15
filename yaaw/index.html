@@ -1,10 +1,15 @@
 <!DOCTYPE html>
-<html lang="en" manifest="./offline.appcache">
+<html lang="zh-Hans" manifest="./offline.appcache">
   <head>
-    <meta charset=utf-8 />
+    <meta charset="utf-8" />
     <title>Aria2 Web 控制台</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no, width=device-width">
     <meta name="author" content="Binux" />
+    <meta name="chinesizing" content="aa65535" />
+    <link href="/favicon.ico" rel="shortcut icon" type="image/ico" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="keywords" content="Aria2,Webui,yaaw,离线,下载" />
+    <meta name="description" content="Aria2 Web 控制台" />
     <link href="static/main.min.css" rel="stylesheet" />
     <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
@@ -191,12 +196,11 @@
       </div>
     </div>
     <div class="modal-footer">
-      <div id="copyright">© Copyright <a href="https://github.com/binux/yaaw">Binux</a> &nbsp;/&nbsp; Chinesizing <a href="http://aa65535.com/public/aria2/">aa65535</a></div>
+      <div id="copyright">Author <a href="https://github.com/binux/yaaw" target="_blank">Binux</a> &nbsp;/&nbsp; Chinesizing <a href="http://aria2c.com/">aa65535</a></div>
       <a href="###" onclick="$('#setting-form').submit();" class="btn btn-success">保存</a>
       <a href="#" class="btn" data-dismiss="modal">取消</a>
     </div>
     </section>
-    
     <script id="global-speed-tpl" type="text/mustache-template">
       <i class="icon-download"></i> <span>{{#_v.format_size}}{{downloadSpeed}}{{/_v.format_size}}</span>/s
         / 
