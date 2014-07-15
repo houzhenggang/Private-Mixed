@@ -9,25 +9,41 @@ function rand_ip() {
 	return ip.join('.');
 }
 
+function in_domain(reg, url) {
+	for (var i in reg) {
+		if (reg[i].test(url)) {
+			return true;
+		}
+	}
+	return false;
+}
+
 function modifyHeader(headers, url) {
-	var i, rip, len, Append, Request = {};
+	var i, reg_f, reg_r, len, Append, Request = {};
 
 	Append = {
 		referer: true,
 		forwarded: true,
 	};
 	len = headers.length;
-	rip = rand_ip();
+	reg_f = [
+		/https?:\/\/.+\.google\.com\/.*/
+	];
+	reg_r = [
+		/https?:\/\/www\.re\/.*/,
+		/https?:\/\/.+\.pcbeta\.com\/.*/
+	];
 
 	for (i = 0; i < len; i++) {
 		// console.log(headers[i].name + ': ' + headers[i].value);
-		if (headers[i].name == 'Referer') {
-			headers[i].value = url;
+		if (headers[i].name == 'Referer' && in_domain(reg_f, url)) {
+			// console.log(headers[i].value.split('/')[2], url.split('/')[2]);
+			// headers[i].value = url;
 			Append.referer = false;
 		}
 
 		if (headers[i].name == 'X-Forwarded-For') {
-			headers[i].value = rip;
+			headers[i].value = rand_ip();
 			Append.forwarded = false;
 		}
 	}
@@ -40,10 +56,10 @@ function modifyHeader(headers, url) {
 		len++;
 	}
 
-	if (Append.forwarded) {
+	if (Append.forwarded && in_domain(reg_f, url)) {
 		headers[len] = {
 			name: 'X-Forwarded-For',
-			value: rip
+			value: rand_ip()
 		};
 		len++;
 	}
