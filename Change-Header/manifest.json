@@ -1,8 +1,8 @@
 {
 	"name": "Change Request Header",
-	"description": "Change Http/Https Request Header",
+	"description": "Change Request Header",
 	"version": "1.0",
-	"permissions": ["tabs", "webRequestBlocking", "webRequest", "<all_urls>"],
+	"permissions": [ "<all_urls>", "tabs", "webRequestBlocking", "webRequest" ],
 	"manifest_version": 2,
 	"icons": {
 		"16": "./icons/icon16.png",
@@ -11,6 +11,7 @@
 		"128": "./icons/icon128.png"
 	},
 	"background": {
-		"scripts": ["./script/background.js"]
+		"scripts": ["./script/background.js"],
+		"persistent": true
 	}
 }

@@ -56,7 +56,7 @@ function modifyHeader(headers, url) {
 		len++;
 	}
 
-	if (Append.forwarded && in_domain(reg_f, url)) {
+	if (Append.forwarded && in_domain(reg_r, url)) {
 		headers[len] = {
 			name: 'X-Forwarded-For',
 			value: rand_ip()
@@ -75,7 +75,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 		return modifyHeader(details.requestHeaders, details.url);
 	},
 	{
-		urls: ['http://*/*', 'https://*/*']
+		urls: [ '<all_urls>' ]
 	},
 	[
 		'requestHeaders',
