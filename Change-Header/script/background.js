@@ -36,9 +36,12 @@ function modifyHeader(headers, url) {
 
 	for (i = 0; i < len; i++) {
 		// console.log(headers[i].name + ': ' + headers[i].value);
-		if (headers[i].name == 'Referer' && in_domain(reg_f, url)) {
-			// console.log(headers[i].value.split('/')[2], url.split('/')[2]);
-			// headers[i].value = url;
+		if (headers[i].name == 'Referer') {
+
+			if (in_domain(reg_f, headers[i].value)) {
+				headers[i].value = url;
+			}
+
 			Append.referer = false;
 		}
 
