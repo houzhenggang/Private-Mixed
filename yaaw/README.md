@@ -1,6 +1,6 @@
 YAAW
 ----
 
-经过修改的[YAAW](https://github.com/binux/yaaw):
+经过汉化的 [YAAW](https://github.com/binux/yaaw)
 
-静态资源合并压缩，目前只有5个文件
+latest commit c23ae2456ec95778651411e5b148b836307f6d8d
