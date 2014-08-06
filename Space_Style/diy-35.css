@@ -20,6 +20,7 @@ body {
 	background: transparent url('http://cdn.pcbeta.attachment.inimc.com/data/attachment/album/201208/25/0013563t8m7ur5zsvrvi8m.jpg') no-repeat center 0 !important;
 	text-shadow: 0 0 10px #FFF;
 	color: #000 !important;
+	font: 12px tahoma,'Hiragino Sans GB','Wenquanyi Micro Hei','\5FAE\8F6F\96C5\9ED1',Arial,Verdana,sans-serif;
 	_display: none !important;
 }
 #hd {
@@ -27,6 +28,7 @@ body {
 	height: 115px !important;
 	text-shadow: none;
 	position: relative !important;
+	border: 0 !important;
 }
 
 /**
@@ -166,11 +168,13 @@ html.ie5 #space, html.ie6 #space, html.ie7 #space, html.ie8 #space, html.ie9 #sp
 }
 #nv li {
 	background: rgba(255, 255, 255, 0.6) !important;
+	font-weight: 700 !important;
 }
 #nv li, .ml li, .mlp img, .mla .c a,#comment dt {
 	padding: 0 !important;
 }
 #nv li a {
+	height: 31px !important;
 	line-height: 31px !important;
 }
 #nv li:hover {
@@ -210,7 +214,7 @@ td.m_c, .p_pop.facel {
 	margin-bottom: 25px;
 	/*min-height: 2007px !important;*/;
 }
-#ct.wp.cl, .avt img {
+#ct.wp.cl, .avt img, .bm_h {
 	background: rgba(255, 255, 255, 0.4) !important;
 }
 
@@ -233,7 +237,7 @@ td.m_c, .p_pop.facel {
 /**
  * [clear background]
  */
-.o.pns, .ct2 .mn, .mm, .bm, .tedt .area, textarea, input, button, #pcd .hm img, #comment dt,.pt.hm, .mlp img, .frame, .frame-tab {
+.o.pns, .ct2 .mn, .mm, .bm, .tedt .area, textarea, input, button, #pcd .hm img, #comment dt,.pt.hm, .mlp img, .frame, .frame-tab, #nv li a:hover, .bm_c.u_profile {
 	background: none !important;
 }
 
@@ -255,14 +259,14 @@ button, .pt, .mla li, .mlp li {
 	border: 1px solid #009ad9 !important;
 }
 
-#pcd .hm img, #comment dt, .tedt, body {
-	border: none !important;
+#pcd .hm img, #comment dt, .tedt, body, .tedt .area {
+	border: 0 !important;
 }
 
 /**
  * [hide elements]
  */
-#toptb, .hm .mbn, .md_ctrl, .focus, .ct2 .sd, #spaceinfoshow, .xg2, .gol, iframe, .ct_vw_sd, .tl #delform, #radio, #wall .title .y, #weixinqr {
+#toptb, .hm .mbn, .md_ctrl, .focus, .ct2 .sd, #spaceinfoshow, .xg2, .gol, iframe, .ct_vw_sd, .tl #delform, #radio, #wall .title .y, #weixinqr, #ft {
 	display: none !important;
 }
 
@@ -429,8 +433,38 @@ button, .pt, .mla li, .mlp li {
 }
 
 /**
- * [profile page image effect]
+ * [profile page]
  */
+.mbm {
+	margin: 0 !important;
+}
+.pbm {
+	padding: 0 !important;
+}
+.u_profile, .u_profile em, .u_profile .xg1 {
+	color: #C00 !important;
+	font-weight: 700;
+}
+.u_profile li {
+	padding: 3px 0 !important;
+	clear: both !important;
+}
+.u_profile li em {
+	display: inline-table !important;
+	width: 75px !important;
+	float: left !important;
+	padding-right: 10px !important;
+}
+.pf_l li {
+	width: 450px !important;
+}
+#pbbs li, #psts li, #pntc li {
+	clear: none !important;
+}
+#psts, .pbm.mbm.bbda.cl {
+	padding-bottom: 10px !important;
+	margin-bottom: 10px !important;
+}
 .pbm.mbm.bbda.cl img {
 	opacity: 0.4;
 	-webkit-transition-duration: .5s;
@@ -487,7 +521,7 @@ button, .pt, .mla li, .mlp li {
 .mlp img, .mla img {
 	height: 120px !important;
 	max-width: 936px !important;
-	border: none !important;
+	border: 0 !important;
 }
 
 #photo_pic div {
@@ -501,24 +535,6 @@ button, .pt, .mla li, .mlp li {
 /**
  * [scrolltop button style]
  */
-/*
-#scrolltop {
-	left: auto !important;
-	right: 50px !important;
-	right: calc(50% - 530px) !important;
-	width: 31px !important;
-	height: 31px !important;
-	bottom: 90px !important;
-	margin: 0 !important;
-	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPBAMAAAD0aukfAAAAGFBMVEUAAAD/abT/abT/abT/abT/abT/abT/abTew/HQAAAAB3RSTlMAv0BggCAwj0XrPAAAAEdJREFUeF5tyLENwCAMBVFLEQNkhUzgjjYdLWICmMHFXx8sfSwKrjo98ZJEWfc9sEBANwIWuJjoTCQ7ksfLutwrYP+57WN1AlJiG/dpk12gAAAAAElFTkSuQmCC') no-repeat 50% 50% !important;
-	border: 3px solid #FF69B4;
-	-webkit-border-radius: 50%;
-	border-radius: 50%;
-}
-#scrolltop:hover {
-	background: transparent url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABMAAAAPBAMAAAD0aukfAAAAGFBMVEUAAAD/AP//AP//AP//AP//AP//AP//AP+50IfHAAAAB3RSTlMAv0BggCAwj0XrPAAAAEdJREFUeF5tyLENwCAMBVFLEQNkhUzgjjYdLWICmMHFXx8sfSwKrjo98ZJEWfc9sEBANwIWuJjoTCQ7ksfLutwrYP+57WN1AlJiG/dpk12gAAAAAElFTkSuQmCC') no-repeat 50% 50% !important;
-}
-*/
 #scrolltop {
 	left: auto !important;
 	right: 50px !important;
@@ -580,11 +596,6 @@ textarea:focus, input:focus {
 	pointer-events: none !important;
 }
 
-.mn .bm.bbda {
-	color: #C00 !important;
-	font-weight: bold !important;
-}
-
 .atd .atdc {
 	filter: alpha(opacity=60);
 	opacity: 0.6;
@@ -631,400 +642,3 @@ textarea:focus, input:focus {
 ::-webkit-scrollbar-track-piece {
 	background: #DFDFDF;
 }
-
-/**
- * test style
- */
-/*
-#space:before {
-	content: "\4F60\4EEC\59B9\59B9\7684\FF01\FF01";
-	position: absolute;
-	top: 132px;
-	left: 48px;
-	padding-right: 10px;
-	color: #000;
-	font-weight: bold;
-	height: 0px;
-	border: 15px solid #FFA200;
-	border-right-color: rgba(0, 0, 0, 0);
-	line-height: 0px;
-	box-shadow: -0px 5px 5px -5px #000;
-	z-index: 1;
-}
-
-#space:before, #append_parent:before, #hd:before, #nv:before, #profile .blocktitle:before, #diypage:before, #frame1:before, #frame1_left:before, #profile:before, #music:before, #music_content:before, #personalinfo:before, #personalinfo_content:before, #statistic:before, #statistic_content:before, #visitor:before, #visitor_content:before, #friend:before, #friend_content:before, #frame1_center:before, #wall:before, #wall_content:before, #comment_ul:before, #scrolltop:before, #music .blocktitle:before {
-	content: "\266c";
-	height: 16px;
-	width: 16px;
-	position: fixed;
-	top: -20px;
-	left: -20px;
-	color: rgba(255, 0, 255, .7);
-	font-size: 16px;
-	font-family: Arial;
-	text-shadow: 0px 0px 5px #fff;
-}
-#space:after, #append_parent:after, #hd:after, #nv:after, #profile .blocktitle:after, #diypage:after, #frame1:after, #frame1_left:after, #profile:after, #music:after, #music_content:after, #personalinfo:after, #personalinfo_content:after, #statistic:after, #statistic_content:after, #visitor:after, #visitor_content:after, #friend:after, #friend_content:after, #frame1_center:after, #wall:after, #wall_content:after, #comment_ul:after, #scrolltop:after, #music .blocktitle:after {
-	content: "\266a";
-	height: 16px;
-	width: 16px;
-	position: fixed;
-	top: -20px;
-	left: -20px;
-	color: rgba(255, 0, 255, .7);
-	font-size: 16px;
-	font-family: Arial;
-	text-shadow: 0px 0px 5px #fff;
-}
-@-webkit-keyframes fall {
-	0% {
-		left: -10%;
-	}
-	100% {
-		left: 110%;
-	};
-}
-@-webkit-keyframes snow {
-	0% {
-		top: -50px;
-	}
-	100% {
-		top: 50px;
-	};
-}
-@-moz-keyframes fall {
-	0% {
-		left: -10%;
-	}
-	100% {
-		left: 110%;
-	};
-}
-@-moz-keyframes snow {
-	0% {
-		top: -50px;
-	}
-	100% {
-		top: 50px;
-	};
-}
-@-ms-keyframes fall {
-	0% {
-		left: -10%;
-	}
-	100% {
-		left: 110%;
-	};
-}
-@-ms-keyframes snow {
-	0% {
-		top: -50px;
-	}
-	100% {
-		top: 50px;
-	};
-}
-#space:before {
-	margin-top: 53%;
-	-webkit-animation: fall ease-in 25s 2.4s infinite, snow 8.8s both infinite alternate;
-	-moz-animation: fall ease-in 25s 2.4s infinite, snow 8.8s both infinite alternate;
-	-ms-animation: fall ease-in 25s 2.4s infinite, snow 8.8s both infinite alternate;
-}
-#append_parent:before {
-	margin-top: 15%;
-	-webkit-animation: fall ease-in 21s 7.8s infinite, snow 6.8s both infinite alternate;
-	-moz-animation: fall ease-in 21s 7.8s infinite, snow 6.8s both infinite alternate;
-	-ms-animation: fall ease-in 21s 7.8s infinite, snow 6.8s both infinite alternate;
-}
-#hd:before {
-	margin-top: 29%;
-	-webkit-animation: fall ease-in 19s 5.8s infinite, snow 9.4s both infinite alternate;
-	-moz-animation: fall ease-in 19s 5.8s infinite, snow 9.4s both infinite alternate;
-	-ms-animation: fall ease-in 19s 5.8s infinite, snow 9.4s both infinite alternate;
-}
-#nv:before {
-	margin-top: 24%;
-	-webkit-animation: fall ease-in 18.2s 6.4s infinite, snow 8.2s both infinite alternate;
-	-moz-animation: fall ease-in 18.2s 6.4s infinite, snow 8.2s both infinite alternate;
-	-ms-animation: fall ease-in 18.2s 6.4s infinite, snow 8.2s both infinite alternate;
-}
-#profile .blocktitle:before {
-	margin-top: 55%;
-	-webkit-animation: fall ease-in 22s 0.4s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 22s 0.4s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 22s 0.4s infinite, snow 7s both infinite alternate;
-}
-#diypage:before {
-	margin-top: 91%;
-	-webkit-animation: fall ease-in 22.4s 1.4s infinite, snow 9.6s both infinite alternate;
-	-moz-animation: fall ease-in 22.4s 1.4s infinite, snow 9.6s both infinite alternate;
-	-ms-animation: fall ease-in 22.4s 1.4s infinite, snow 9.6s both infinite alternate;
-}
-#frame1:before {
-	margin-top: 66%;
-	-webkit-animation: fall ease-in 19.6s 6.2s infinite, snow 7.6s both infinite alternate;
-	-moz-animation: fall ease-in 19.6s 6.2s infinite, snow 7.6s both infinite alternate;
-	-ms-animation: fall ease-in 19.6s 6.2s infinite, snow 7.6s both infinite alternate;
-}
-#frame1_left:before {
-	margin-top: 80%;
-	-webkit-animation: fall ease-in 24.8s 1.4s infinite, snow 9.8s both infinite alternate;
-	-moz-animation: fall ease-in 24.8s 1.4s infinite, snow 9.8s both infinite alternate;
-	-ms-animation: fall ease-in 24.8s 1.4s infinite, snow 9.8s both infinite alternate;
-}
-#profile:before {
-	margin-top: 81%;
-	-webkit-animation: fall ease-in 25.8s 5.2s infinite, snow 8s both infinite alternate;
-	-moz-animation: fall ease-in 25.8s 5.2s infinite, snow 8s both infinite alternate;
-	-ms-animation: fall ease-in 25.8s 5.2s infinite, snow 8s both infinite alternate;
-}
-#music:before {
-	margin-top: 26%;
-	-webkit-animation: fall ease-in 18.2s 5.6s infinite, snow 9.6s both infinite alternate;
-	-moz-animation: fall ease-in 18.2s 5.6s infinite, snow 9.6s both infinite alternate;
-	-ms-animation: fall ease-in 18.2s 5.6s infinite, snow 9.6s both infinite alternate;
-}
-#music_content:before {
-	margin-top: 6%;
-	-webkit-animation: fall ease-in 20.4s 7.2s infinite, snow 7.8s both infinite alternate;
-	-moz-animation: fall ease-in 20.4s 7.2s infinite, snow 7.8s both infinite alternate;
-	-ms-animation: fall ease-in 20.4s 7.2s infinite, snow 7.8s both infinite alternate;
-}
-#personalinfo:before {
-	margin-top: 21%;
-	-webkit-animation: fall ease-in 24.6s 3.8s infinite, snow 8.2s both infinite alternate;
-	-moz-animation: fall ease-in 24.6s 3.8s infinite, snow 8.2s both infinite alternate;
-	-ms-animation: fall ease-in 24.6s 3.8s infinite, snow 8.2s both infinite alternate;
-}
-#personalinfo_content:before {
-	margin-top: 24%;
-	-webkit-animation: fall ease-in 26s 1.8s infinite, snow 9.4s both infinite alternate;
-	-moz-animation: fall ease-in 26s 1.8s infinite, snow 9.4s both infinite alternate;
-	-ms-animation: fall ease-in 26s 1.8s infinite, snow 9.4s both infinite alternate;
-}
-#statistic:before {
-	margin-top: 45%;
-	-webkit-animation: fall ease-in 18.2s 3.6s infinite, snow 9s both infinite alternate;
-	-moz-animation: fall ease-in 18.2s 3.6s infinite, snow 9s both infinite alternate;
-	-ms-animation: fall ease-in 18.2s 3.6s infinite, snow 9s both infinite alternate;
-}
-#statistic_content:before {
-	margin-top: 29%;
-	-webkit-animation: fall ease-in 23s 2.4s infinite, snow 8s both infinite alternate;
-	-moz-animation: fall ease-in 23s 2.4s infinite, snow 8s both infinite alternate;
-	-ms-animation: fall ease-in 23s 2.4s infinite, snow 8s both infinite alternate;
-}
-#visitor:before {
-	margin-top: 37%;
-	-webkit-animation: fall ease-in 21.6s 6.4s infinite, snow 7.6s both infinite alternate;
-	-moz-animation: fall ease-in 21.6s 6.4s infinite, snow 7.6s both infinite alternate;
-	-ms-animation: fall ease-in 21.6s 6.4s infinite, snow 7.6s both infinite alternate;
-}
-#visitor_content:before {
-	margin-top: 53%;
-	-webkit-animation: fall ease-in 25.4s 0.8s infinite, snow 7.4s both infinite alternate;
-	-moz-animation: fall ease-in 25.4s 0.8s infinite, snow 7.4s both infinite alternate;
-	-ms-animation: fall ease-in 25.4s 0.8s infinite, snow 7.4s both infinite alternate;
-}
-#friend:before {
-	margin-top: 18%;
-	-webkit-animation: fall ease-in 22s 6s infinite, snow 8s both infinite alternate;
-	-moz-animation: fall ease-in 22s 6s infinite, snow 8s both infinite alternate;
-	-ms-animation: fall ease-in 22s 6s infinite, snow 8s both infinite alternate;
-}
-#friend_content:before {
-	margin-top: 30%;
-	-webkit-animation: fall ease-in 21s 7.8s infinite, snow 8s both infinite alternate;
-	-moz-animation: fall ease-in 21s 7.8s infinite, snow 8s both infinite alternate;
-	-ms-animation: fall ease-in 21s 7.8s infinite, snow 8s both infinite alternate;
-}
-#frame1_center:before {
-	margin-top: 56%;
-	-webkit-animation: fall ease-in 24.2s 7.4s infinite, snow 8s both infinite alternate;
-	-moz-animation: fall ease-in 24.2s 7.4s infinite, snow 8s both infinite alternate;
-	-ms-animation: fall ease-in 24.2s 7.4s infinite, snow 8s both infinite alternate;
-}
-#wall:before {
-	margin-top: 33%;
-	-webkit-animation: fall ease-in 19.6s 1.6s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 19.6s 1.6s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 19.6s 1.6s infinite, snow 7s both infinite alternate;
-}
-#wall_content:before {
-	margin-top: 18%;
-	-webkit-animation: fall ease-in 24.6s 7.2s infinite, snow 9.8s both infinite alternate;
-	-moz-animation: fall ease-in 24.6s 7.2s infinite, snow 9.8s both infinite alternate;
-	-ms-animation: fall ease-in 24.6s 7.2s infinite, snow 9.8s both infinite alternate;
-}
-#comment_ul:before {
-	margin-top: 60%;
-	-webkit-animation: fall ease-in 19s 0.4s infinite, snow 9.8s both infinite alternate;
-	-moz-animation: fall ease-in 19s 0.4s infinite, snow 9.8s both infinite alternate;
-	-ms-animation: fall ease-in 19s 0.4s infinite, snow 9.8s both infinite alternate;
-}
-#scrolltop:before {
-	margin-top: 86%;
-	-webkit-animation: fall ease-in 25s 0.4s infinite, snow 8.6s both infinite alternate;
-	-moz-animation: fall ease-in 25s 0.4s infinite, snow 8.6s both infinite alternate;
-	-ms-animation: fall ease-in 25s 0.4s infinite, snow 8.6s both infinite alternate;
-}
-#music .blocktitle:before {
-	margin-top: 15%;
-	-webkit-animation: fall ease-in 24.4s 1.2s infinite, snow 8.4s both infinite alternate;
-	-moz-animation: fall ease-in 24.4s 1.2s infinite, snow 8.4s both infinite alternate;
-	-ms-animation: fall ease-in 24.4s 1.2s infinite, snow 8.4s both infinite alternate;
-}
-#space:after {
-	margin-top: 98%;
-	-webkit-animation: fall ease-in 25.2s 7s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 25.2s 7s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 25.2s 7s infinite, snow 7s both infinite alternate;
-}
-#append_parent:after {
-	margin-top: 16%;
-	-webkit-animation: fall ease-in 19.4s 6.4s infinite, snow 7.6s both infinite alternate;
-	-moz-animation: fall ease-in 19.4s 6.4s infinite, snow 7.6s both infinite alternate;
-	-ms-animation: fall ease-in 19.4s 6.4s infinite, snow 7.6s both infinite alternate;
-}
-#hd:after {
-	margin-top: 99%;
-	-webkit-animation: fall ease-in 20.4s 3s infinite, snow 7.6s both infinite alternate;
-	-moz-animation: fall ease-in 20.4s 3s infinite, snow 7.6s both infinite alternate;
-	-ms-animation: fall ease-in 20.4s 3s infinite, snow 7.6s both infinite alternate;
-}
-#nv:after {
-	margin-top: 44%;
-	-webkit-animation: fall ease-in 24.8s 3s infinite, snow 8.6s both infinite alternate;
-	-moz-animation: fall ease-in 24.8s 3s infinite, snow 8.6s both infinite alternate;
-	-ms-animation: fall ease-in 24.8s 3s infinite, snow 8.6s both infinite alternate;
-}
-#profile .blocktitle:after {
-	margin-top: 85%;
-	-webkit-animation: fall ease-in 23.6s 4.4s infinite, snow 10s both infinite alternate;
-	-moz-animation: fall ease-in 23.6s 4.4s infinite, snow 10s both infinite alternate;
-	-ms-animation: fall ease-in 23.6s 4.4s infinite, snow 10s both infinite alternate;
-}
-#diypage:after {
-	margin-top: 14%;
-	-webkit-animation: fall ease-in 18.4s 2.6s infinite, snow 9s both infinite alternate;
-	-moz-animation: fall ease-in 18.4s 2.6s infinite, snow 9s both infinite alternate;
-	-ms-animation: fall ease-in 18.4s 2.6s infinite, snow 9s both infinite alternate;
-}
-#frame1:after {
-	margin-top: 36%;
-	-webkit-animation: fall ease-in 23.6s 1.8s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 23.6s 1.8s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 23.6s 1.8s infinite, snow 7s both infinite alternate;
-}
-#frame1_left:after {
-	margin-top: 1%;
-	-webkit-animation: fall ease-in 19.6s 1.2s infinite, snow 6.8s both infinite alternate;
-	-moz-animation: fall ease-in 19.6s 1.2s infinite, snow 6.8s both infinite alternate;
-	-ms-animation: fall ease-in 19.6s 1.2s infinite, snow 6.8s both infinite alternate;
-}
-#profile:after {
-	margin-top: 54%;
-	-webkit-animation: fall ease-in 22s 2.4s infinite, snow 7.2s both infinite alternate;
-	-moz-animation: fall ease-in 22s 2.4s infinite, snow 7.2s both infinite alternate;
-	-ms-animation: fall ease-in 22s 2.4s infinite, snow 7.2s both infinite alternate;
-}
-#music:after {
-	margin-top: 11%;
-	-webkit-animation: fall ease-in 22.2s 4.4s infinite, snow 7.8s both infinite alternate;
-	-moz-animation: fall ease-in 22.2s 4.4s infinite, snow 7.8s both infinite alternate;
-	-ms-animation: fall ease-in 22.2s 4.4s infinite, snow 7.8s both infinite alternate;
-}
-#music_content:after {
-	margin-top: 90%;
-	-webkit-animation: fall ease-in 25.4s 0.8s infinite, snow 9.8s both infinite alternate;
-	-moz-animation: fall ease-in 25.4s 0.8s infinite, snow 9.8s both infinite alternate;
-	-ms-animation: fall ease-in 25.4s 0.8s infinite, snow 9.8s both infinite alternate;
-}
-#personalinfo:after {
-	margin-top: 85%;
-	-webkit-animation: fall ease-in 25.8s 2.6s infinite, snow 8.4s both infinite alternate;
-	-moz-animation: fall ease-in 25.8s 2.6s infinite, snow 8.4s both infinite alternate;
-	-ms-animation: fall ease-in 25.8s 2.6s infinite, snow 8.4s both infinite alternate;
-}
-#personalinfo_content:after {
-	margin-top: 78%;
-	-webkit-animation: fall ease-in 23.2s 2.2s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 23.2s 2.2s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 23.2s 2.2s infinite, snow 7s both infinite alternate;
-}
-#statistic:after {
-	margin-top: 8%;
-	-webkit-animation: fall ease-in 21.6s 8s infinite, snow 8.4s both infinite alternate;
-	-moz-animation: fall ease-in 21.6s 8s infinite, snow 8.4s both infinite alternate;
-	-ms-animation: fall ease-in 21.6s 8s infinite, snow 8.4s both infinite alternate;
-}
-#statistic_content:after {
-	margin-top: 49%;
-	-webkit-animation: fall ease-in 24.6s 7.6s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 24.6s 7.6s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 24.6s 7.6s infinite, snow 7s both infinite alternate;
-}
-#visitor:after {
-	margin-top: 45%;
-	-webkit-animation: fall ease-in 18.6s 7s infinite, snow 9.6s both infinite alternate;
-	-moz-animation: fall ease-in 18.6s 7s infinite, snow 9.6s both infinite alternate;
-	-ms-animation: fall ease-in 18.6s 7s infinite, snow 9.6s both infinite alternate;
-}
-#visitor_content:after {
-	margin-top: 74%;
-	-webkit-animation: fall ease-in 19.8s 5.2s infinite, snow 7.2s both infinite alternate;
-	-moz-animation: fall ease-in 19.8s 5.2s infinite, snow 7.2s both infinite alternate;
-	-ms-animation: fall ease-in 19.8s 5.2s infinite, snow 7.2s both infinite alternate;
-}
-#friend:after {
-	margin-top: 56%;
-	-webkit-animation: fall ease-in 21s 5.8s infinite, snow 6.4s both infinite alternate;
-	-moz-animation: fall ease-in 21s 5.8s infinite, snow 6.4s both infinite alternate;
-	-ms-animation: fall ease-in 21s 5.8s infinite, snow 6.4s both infinite alternate;
-}
-#friend_content:after {
-	margin-top: 64%;
-	-webkit-animation: fall ease-in 23.8s 6s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 23.8s 6s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 23.8s 6s infinite, snow 7s both infinite alternate;
-}
-#frame1_center:after {
-	margin-top: 25%;
-	-webkit-animation: fall ease-in 24.2s 6.8s infinite, snow 7.8s both infinite alternate;
-	-moz-animation: fall ease-in 24.2s 6.8s infinite, snow 7.8s both infinite alternate;
-	-ms-animation: fall ease-in 24.2s 6.8s infinite, snow 7.8s both infinite alternate;
-}
-#wall:after {
-	margin-top: 21%;
-	-webkit-animation: fall ease-in 18.6s 2.2s infinite, snow 7.2s both infinite alternate;
-	-moz-animation: fall ease-in 18.6s 2.2s infinite, snow 7.2s both infinite alternate;
-	-ms-animation: fall ease-in 18.6s 2.2s infinite, snow 7.2s both infinite alternate;
-}
-#wall_content:after {
-	margin-top: 58%;
-	-webkit-animation: fall ease-in 19.8s 5.8s infinite, snow 9.6s both infinite alternate;
-	-moz-animation: fall ease-in 19.8s 5.8s infinite, snow 9.6s both infinite alternate;
-	-ms-animation: fall ease-in 19.8s 5.8s infinite, snow 9.6s both infinite alternate;
-}
-#comment_ul:after {
-	margin-top: 80%;
-	-webkit-animation: fall ease-in 23.2s 5s infinite, snow 8.4s both infinite alternate;
-	-moz-animation: fall ease-in 23.2s 5s infinite, snow 8.4s both infinite alternate;
-	-ms-animation: fall ease-in 23.2s 5s infinite, snow 8.4s both infinite alternate;
-}
-#scrolltop:after {
-	margin-top: 75%;
-	-webkit-animation: fall ease-in 21.2s 1.8s infinite, snow 9.2s both infinite alternate;
-	-moz-animation: fall ease-in 21.2s 1.8s infinite, snow 9.2s both infinite alternate;
-	-ms-animation: fall ease-in 21.2s 1.8s infinite, snow 9.2s both infinite alternate;
-}
-#music .blocktitle:after {
-	margin-top: 62%;
-	-webkit-animation: fall ease-in 26s 5.4s infinite, snow 7s both infinite alternate;
-	-moz-animation: fall ease-in 26s 5.4s infinite, snow 7s both infinite alternate;
-	-ms-animation: fall ease-in 26s 5.4s infinite, snow 7s both infinite alternate;
-}
-**/
-/*
-spacecss=&style=t3&layoutdata=<?xml+version="1.0"+encoding="ISO-8859-1"?><root><item+id="diypage"><item+id="frame`frame1"><item+id="attr"><item+id="name"><![CDATA[frame1]]></item><item+id="moveable"><![CDATA[false]]></item><item+id="className"><![CDATA[frame+cl]]></item><item+id="titles"></item></item><item+id="column`frame1_left"><item+id="attr"><item+id="name"><![CDATA[frame1_left]]></item><item+id="className"><![CDATA[z+column]]></item></item><item+id="block`profile"><item+id="attr"><item+id="name"><![CDATA[profile]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[果照什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=profile]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`music"><item+id="attr"><item+id="name"><![CDATA[music]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[他妹的音乐更好听]]></item><item+id="href"><![CDATA[]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`personalinfo"><item+id="attr"><item+id="name"><![CDATA[personalinfo]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[个人资料什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=profile]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="1"><item+id="text"><![CDATA[编辑我的资料]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=spacecp&ac=profile]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[y+xw0]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`statistic"><item+id="attr"><item+id="name"><![CDATA[statistic]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[统计信息什么的]]></item><item+id="href"><![CDATA[]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`visitor"><item+id="attr"><item+id="name"><![CDATA[visitor]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[最近来串门的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=friend&view=visitor]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item><item+id="block`friend"><item+id="attr"><item+id="name"><![CDATA[friend]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[好基友什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=friend&view=me&from=space]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item></item><item+id="column`frame1_center"><item+id="attr"><item+id="name"><![CDATA[frame1_center]]></item><item+id="className"><![CDATA[z+column]]></item></item><item+id="block`wall"><item+id="attr"><item+id="name"><![CDATA[wall]]></item><item+id="className"><![CDATA[block+move-span]]></item><item+id="titles"><item+id="0"><item+id="text"><![CDATA[留言板什么的]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=wall]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[]]></item><item+id="src"><![CDATA[]]></item></item><item+id="1"><item+id="text"><![CDATA[全部]]></item><item+id="href"><![CDATA[http://i.pcbeta.com/home.php?mod=space&uid=1004992&do=wall]]></item><item+id="color"><![CDATA[]]></item><item+id="float"><![CDATA[]]></item><item+id="margin"><![CDATA[]]></item><item+id="font-size"><![CDATA[]]></item><item+id="className"><![CDATA[y+xw0]]></item><item+id="src"><![CDATA[]]></item></item><item+id="className"><item+id="0"><![CDATA[blocktitle+title]]></item></item><item+id="style"></item></item></item></item></item></item></item></root>&currentlayout=2:2&formhash=bacce895&diysubmit=true
-*/
