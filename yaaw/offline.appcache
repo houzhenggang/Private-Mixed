@@ -1,8 +1,9 @@
 CACHE MANIFEST
-#2014-08-05 18:35
+#2014-08-07 21:55
 
 CACHE:
 index.html
+favicon.ico
 css/main.css
 css/bootstrap.min.css
 css/bootstrap-responsive.min.css
