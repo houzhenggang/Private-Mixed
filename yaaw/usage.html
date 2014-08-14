@@ -10,7 +10,7 @@
 	<meta name="description" content="Aria2 & YAAW 使用说明" />
 	<style type="text/css">
 		body {
-			font: 12pt 'Hiragino Sans GB','Wenquanyi Micro Hei','\5FAE\8F6F\96C5\9ED1',sans-serif;
+			font: 12pt 'Hiragino Sans GB','Wenquanyi Micro Hei','Microsoft YaHei',sans-serif;
 			font-size: 12pt;
 			color: #000000;
 			margin-bottom: 2em;
@@ -21,29 +21,27 @@
 		a {
 			text-decoration: none;
 		}
+		b {
+			font-weight: 700;
+		}
 		.code, code {
 			font-family: Monaco,Consolas,monospace;
 			font-size: 10pt;
 			background: #F7F7F7;
 		}
-		blockquote {
-			margin: 0.5em 0;
-			padding: 0 1em;
-			color: #555;
-			border-left: 4px solid #DDD;
-		}
 		.code {
-			line-height: 1.5;
 			width: 45em;
 			margin: 0.5em 0;
-			padding: 0 1em;
+			padding: 0 1.2em;
+			border: 1px solid #DDD;
+			border-left: 8px solid #DDD;
+			line-height: 1.5;
 			display: block;
 		}
 		.content {
 			line-height: 1.7;
 			font-size: 10pt;
 			margin-left: 1em;
-			display: block;
 		}
 		.sc1 {
 			color: #008000;
@@ -58,7 +56,7 @@
 	<h1>Aria2 & YAAW 使用说明</h1>
 	<hr>
 	<h2>Aria2 配置说明</h2>
-	<span class="content">
+	<div class="content">
 		<ul>
 			<li><b>完整选项说明请参考 <a href="http://aria2.sourceforge.net/manual/en/html/aria2c.html" target="_blank">Aria2 Manual</a></b></li>
 			<li><b>参数 <code>--dir</code> <code>--input-file</code> <code>--save-session</code> 根据实际情况修改路径</b></li>
@@ -156,7 +154,7 @@
 <span class="sc5">user-agent</span><span class="sc3">=</span><span class="sc0">Transmission/2.77</span>
 <span class="sc1"># 当种子的分享率达到这个数时, 自动停止做种, 0为一直做种, 默认:1.0</span>
 <span class="sc5">seed-ratio</span><span class="sc3">=</span><span class="sc0">0</span>
-<span class="sc1"># 强制保存会话, 话即使任务已经完成, 默认:false
+<span class="sc1"># 强制保存会话, 即使任务已经完成, 默认:false
 # 较新的版本开启后会在任务完成后依然保留.aria2文件
 #force-save=false
 # BT校验相关, 默认:true
@@ -167,9 +165,9 @@
 <span class="sc5">bt-save-metadata</span><span class="sc3">=</span><span class="sc0">true</span></pre>
 			</li>
 		</ul>
-	</span>
+	</div>
 	<h2>Aria2 相关下载</h2>
-	<span class="content">
+	<div class="content">
 		<ul>
 			<li><a href="https://sourceforge.net/projects/aria2/files/stable/" target="_blank">Aria2 源码/程序下载</a></li>
 			<li><a href="archiver/aria2.conf" target="_blank">配置示例下载</a></li>
@@ -182,47 +180,33 @@ README.md     <span class="sc1"># README</span>
 Aria2Data     <span class="sc1"># 下载目录 默认下载文件会保存在这里</span></pre>
 			</li>
 		</ul>
-	</span>
+	</div>
 	<h2>YAAW 使用说明</h2>
-	<span class="content">
+	<div class="content">
 		<b>JSON-RPC Path</b>
 		<ul>
 			<li><code>JSON-RPC Path</code> 默认为: <code>http://localhost:6800/jsonrpc</code></li>
 			<li>如果提示 <code>Aria2 RPC 服务器错误</code> 按照以下方法修改
-				<blockquote>
-					<b><code>host</code></b>: 指运行 Aria2 所在机器的 IP 或者名字
-					<br>
-					<b><code>port</code></b>: 使用 <code>--rpc-listen-port</code> 选项设置的端口, 未设置则是 <code>6800</code>
-					<br>
-					普通情况设置为: <code>http://host:port/jsonrpc</code>
-					<br>
-					使用 <code>--rpc-secret=xxxxxx</code> 选项设置为: <code>http://token:xxxxxx@host:port/jsonrpc</code>
-					<br>
-					使用 <code>--rpc-user=user --rpc-passwd=pwd </code> 选项设置为: <code>http://user:pwd@host:port/jsonrpc</code>
-				</blockquote>
+				<ul style="list-style-type: square;">
+					<li><b><code>host</code></b>: 指运行 Aria2 所在机器的 IP 或者名字</li>
+					<li><b><code>port</code></b>: 使用 <code>--rpc-listen-port</code> 选项设置的端口, 未设置则是 <code>6800</code></li>
+				</ul>
+				<ul style="list-style-type: circle;">
+					<li>普通情况设置为: <code>http://host:port/jsonrpc</code></li>
+					<li>使用 <code>--rpc-secret=xxxxxx</code> 选项设置为: <code>http://token:xxxxxx@host:port/jsonrpc</code></li>
+					<li>使用 <code>--rpc-user=user --rpc-passwd=pwd </code> 选项设置为: <code>http://user:pwd@host:port/jsonrpc</code></li>
+				</ul>
 			</li>
 		</ul>
-		<br>
-<!--
-		<b>参数化链接支持 选项 (目前无法正常使用)</b>
-		<blockquote>
-			这个是 Aria2 支持的功能, 放在这里介绍一下
-			<br>
-			如 <code>http://host/image[000-100].png</code> 代表 <code>000-100</code> 这 <code>100</code> 个文件
-			<br>
-			如 <code>http://host/image[000-100:2].png</code> 代表 <code>000-100</code> 每次加 <code>2</code>
-		</blockquote>
-		<br>
--->
 		<b>Tips</b>
 		<ul>
 			<li>在 YAAW 中对 Aria2 的设置会在 Aria2 重启后丢失, 必要的设置请写入配置文件</li>
 			<li>已经下载完成的任务会在 Aria2 重启后消失, 除非启用了 <code>--force-save</code> 选项</li>
 			<li>因界面已汉化, 其他不再赘述.</li>
 		</ul>
-	</span>
+	</div>
 	<h2>YAAW 搭配脚本</h2>
-	<span class="content">
+	<div class="content">
 		<b>迅雷离线</b>
 		<ul>
 			<li title="可以方便的把迅雷离线的下载地址导出到aria2/aria2-rpc/wget/IDM/Orbit，支持YAAW">Chrome Extension: <a href="https://chrome.google.com/webstore/detail/eehlmkfpnagoieibahhcghphdbjcdmen" target="_blank">ThunderLixianAssistant</a></li>
@@ -243,6 +227,6 @@ Aria2Data     <span class="sc1"># 下载目录 默认下载文件会保存在这
 		<ul>
 			<li title="用Aria2接管chrome的下载">Chrome Extension: <a href="https://chrome.google.com/webstore/detail/nimeojfecmndgolmlmjghjmbpdkhhogl" target="_blank">添加到aria2</a></li>
 		</ul>
-	</span>
+	</div>
 </body>
 </html>
