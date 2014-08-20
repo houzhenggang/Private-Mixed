@@ -144,13 +144,12 @@ static ngx_int_t
 ngx_http_autoindex_handler(ngx_http_request_t *r)
 {
     u_char                         *last, *filename, scale;
-    off_t                           length;
     size_t                          len, char_len, escape_html, allocated, root;
     ngx_tm_t                        tm;
     ngx_err_t                       err;
     ngx_buf_t                      *b;
     ngx_int_t                       rc;
-    float                           size;
+    float                           size, length;
     ngx_str_t                       path;
     ngx_dir_t                       dir;
     ngx_uint_t                      i, level, utf8;
