@@ -1,7 +1,8 @@
+build
 *.exe
-*.tmp.*
 *.pyc
 *.swp
 *.crx
 *.pem
-build
+*.tmp.*
+*.min.*
