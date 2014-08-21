@@ -160,9 +160,6 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
     ngx_http_autoindex_entry_t     *entry;
     ngx_http_autoindex_loc_conf_t  *alcf;
 
-    static char  *months[] = { "Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                               "Jul", "Aug", "Sep", "Oct", "Nov", "Dec" };
-
     if (r->uri.data[r->uri.len - 1] != '/') {
         return NGX_DECLINED;
     }
@@ -507,12 +504,13 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
 
         ngx_gmtime(entry[i].mtime + tp->gmtoff * 60 * alcf->localtime, &tm);
 
-        b->last = ngx_sprintf(b->last, "%02d-%s-%d %02d:%02d ",
-                              tm.ngx_tm_mday,
-                              months[tm.ngx_tm_mon - 1],
+        b->last = ngx_sprintf(b->last, "%d-%02d-%02d %02d:%02d:%02d ",
                               tm.ngx_tm_year,
+                              tm.ngx_tm_mon,
+                              tm.ngx_tm_mday,
                               tm.ngx_tm_hour,
-                              tm.ngx_tm_min);
+                              tm.ngx_tm_min,
+                              tm.ngx_tm_sec);
 
         if (alcf->exact_size) {
             if (entry[i].dir) {
