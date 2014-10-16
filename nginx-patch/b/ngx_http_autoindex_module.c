@@ -385,7 +385,7 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
             + entry[i].escape_html
             + alcf->name_length + sizeof("&gt;") - 2
             + sizeof("</a>") - 1
-            + sizeof(" 28-Sep-1970 12:00 ") - 1
+            + sizeof(" 1970-09-28 12:00:00 ") - 1
             + 20                                         /* the file size */
             + 2;
     }
