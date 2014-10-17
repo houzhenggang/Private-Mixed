@@ -1,0 +1,16 @@
+#!/bin/bash
+
+WEB_DIR=/home/www/website
+NC_OUT=/tmp/nc.out
+GIT_UA="GitHub-Hookshot"
+
+while [ 1 ]; do
+    nc -l 127.0.0.1 1234 > $NC_OUT
+    cat $NC_OUT | grep "$GIT_UA" && \
+    {
+        cd $WEB_DIR
+        # git checkout -- .
+        git pull
+        # You can also specify other commands
+    }
+done
