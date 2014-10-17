@@ -40,11 +40,14 @@ typedef struct {
     ngx_flag_t     enable;
     ngx_flag_t     localtime;
     ngx_flag_t     exact_size;
-    ngx_uint_t     name_length;
+    ngx_uint_t     name_last;
+    ngx_uint_t     max_name_len;
 } ngx_http_autoindex_loc_conf_t;
 
 
 #define NGX_HTTP_AUTOINDEX_PREALLOCATE  50
+
+#define NGX_HTTP_AUTOINDEX_NAME_LEN     50
 
 
 static int ngx_libc_cdecl ngx_http_autoindex_cmp_entries(const void *one,
@@ -80,11 +83,18 @@ static ngx_command_t  ngx_http_autoindex_commands[] = {
       offsetof(ngx_http_autoindex_loc_conf_t, exact_size),
       NULL },
 
-    { ngx_string("autoindex_name_length"),
+    { ngx_string("autoindex_name_last"),
       NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_TAKE1,
       ngx_conf_set_num_slot,
       NGX_HTTP_LOC_CONF_OFFSET,
-      offsetof(ngx_http_autoindex_loc_conf_t, name_length),
+      offsetof(ngx_http_autoindex_loc_conf_t, name_last),
+      NULL },
+
+    { ngx_string("autoindex_max_name_len"),
+      NGX_HTTP_MAIN_CONF|NGX_HTTP_SRV_CONF|NGX_HTTP_LOC_CONF|NGX_CONF_TAKE1,
+      ngx_conf_set_num_slot,
+      NGX_HTTP_LOC_CONF_OFFSET,
+      offsetof(ngx_http_autoindex_loc_conf_t, max_name_len),
       NULL },
 
       ngx_null_command
@@ -144,7 +154,8 @@ static ngx_int_t
 ngx_http_autoindex_handler(ngx_http_request_t *r)
 {
     u_char                         *last, *filename, scale;
-    size_t                          len, char_len, escape_html, allocated, root;
+    size_t                          len, char_len, escape_html, allocated, root,
+                                    tmp_name_len = 0;
     ngx_tm_t                        tm;
     ngx_err_t                       err;
     ngx_buf_t                      *b;
@@ -354,10 +365,24 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
             entry->utf_len = len;
         }
 
+        if (entry->name.len > tmp_name_len) {
+            tmp_name_len = entry->name.len;
+        }
+
         entry->dir = ngx_de_is_dir(&dir);
         entry->mtime = ngx_de_mtime(&dir);
         entry->size = ngx_de_size(&dir);
     }
+
+    if (alcf->max_name_len - tmp_name_len > alcf->name_last) {
+        alcf->max_name_len = tmp_name_len + alcf->name_last;
+    }
+
+   /*
+    if (NGX_HTTP_AUTOINDEX_NAME_LEN > alcf->max_name_len) {
+        alcf->max_name_len = NGX_HTTP_AUTOINDEX_NAME_LEN;
+    }
+    */
 
     if (ngx_close_dir(&dir) == NGX_ERROR) {
         ngx_log_error(NGX_LOG_ALERT, r->connection->log, ngx_errno,
@@ -383,7 +408,7 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
             + sizeof("\">") - 1
             + entry[i].name.len - entry[i].utf_len
             + entry[i].escape_html
-            + alcf->name_length + sizeof("&gt;") - 2
+            + alcf->max_name_len + sizeof("&gt;") - 2
             + sizeof("</a>") - 1
             + sizeof(" 1970-09-28 12:00:00 ") - 1
             + 20                                         /* the file size */
@@ -445,11 +470,11 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
         len = entry[i].utf_len;
 
         if (entry[i].name.len != len) {
-            if (len > alcf->name_length) {
-                char_len = alcf->name_length - 3 + 1;
+            if (len > alcf->max_name_len) {
+                char_len = alcf->max_name_len - 3 + 1;
 
             } else {
-                char_len = alcf->name_length + 1;
+                char_len = alcf->max_name_len + 1;
             }
 
             last = b->last;
@@ -465,8 +490,8 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
 
         } else {
             if (entry[i].escape_html) {
-                if (len > alcf->name_length) {
-                    char_len = alcf->name_length - 3;
+                if (len > alcf->max_name_len) {
+                    char_len = alcf->max_name_len - 3;
 
                 } else {
                     char_len = len;
@@ -478,25 +503,25 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
 
             } else {
                 b->last = ngx_cpystrn(b->last, entry[i].name.data,
-                                      alcf->name_length + 1);
+                                      alcf->max_name_len + 1);
                 last = b->last - 3;
             }
         }
 
-        if (len > alcf->name_length) {
+        if (len > alcf->max_name_len) {
             b->last = ngx_cpymem(last, "..&gt;</a>", sizeof("..&gt;</a>") - 1);
 
         } else {
-            if (entry[i].dir && alcf->name_length - len > 0) {
+            if (entry[i].dir && alcf->max_name_len - len > 0) {
                 *b->last++ = '/';
                 len++;
             }
 
             b->last = ngx_cpymem(b->last, "</a>", sizeof("</a>") - 1);
 
-            if (alcf->name_length - len > 0) {
-                ngx_memset(b->last, ' ', alcf->name_length - len);
-                b->last += alcf->name_length - len;
+            if (alcf->max_name_len - len > 0) {
+                ngx_memset(b->last, ' ', alcf->max_name_len - len);
+                b->last += alcf->max_name_len - len;
             }
         }
 
@@ -660,7 +685,8 @@ ngx_http_autoindex_create_loc_conf(ngx_conf_t *cf)
     conf->enable = NGX_CONF_UNSET;
     conf->localtime = NGX_CONF_UNSET;
     conf->exact_size = NGX_CONF_UNSET;
-    conf->name_length = NGX_CONF_UNSET_UINT;
+    conf->name_last = NGX_CONF_UNSET_UINT;
+    conf->max_name_len = NGX_CONF_UNSET_UINT;
 
     return conf;
 }
@@ -675,7 +701,9 @@ ngx_http_autoindex_merge_loc_conf(ngx_conf_t *cf, void *parent, void *child)
     ngx_conf_merge_value(conf->enable, prev->enable, 0);
     ngx_conf_merge_value(conf->localtime, prev->localtime, 0);
     ngx_conf_merge_value(conf->exact_size, prev->exact_size, 1);
-    ngx_conf_merge_uint_value(conf->name_length, prev->name_length, 50);
+    ngx_conf_merge_uint_value(conf->name_last, prev->name_last, 0);
+    ngx_conf_merge_uint_value(conf->max_name_len, prev->max_name_len,
+                              NGX_HTTP_AUTOINDEX_NAME_LEN);
 
     return NGX_CONF_OK;
 }
