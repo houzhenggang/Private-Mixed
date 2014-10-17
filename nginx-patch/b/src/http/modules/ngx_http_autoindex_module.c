@@ -375,7 +375,7 @@ ngx_http_autoindex_handler(ngx_http_request_t *r)
     }
 
     if (alcf->max_name_len - tmp_name_len > alcf->name_last) {
-        alcf->max_name_len = tmp_name_len + alcf->name_last;
+        alcf->max_name_len = tmp_name_len + 1 + alcf->name_last;
     }
 
    /*

@@ -1,6 +1,6 @@
 diff -uNr a/src/http/modules/ngx_http_autoindex_module.c b/src/http/modules/ngx_http_autoindex_module.c
 --- a/src/http/modules/ngx_http_autoindex_module.c	Fri Oct 17 09:34:10 2014
-+++ b/src/http/modules/ngx_http_autoindex_module.c	Fri Oct 17 10:27:15 2014
++++ b/src/http/modules/ngx_http_autoindex_module.c	Fri Oct 17 14:08:17 2014
 @@ -40,6 +40,8 @@
      ngx_flag_t     enable;
      ngx_flag_t     localtime;
@@ -81,7 +81,7 @@ diff -uNr a/src/http/modules/ngx_http_autoindex_module.c b/src/http/modules/ngx_
      }
  
 +    if (alcf->max_name_len - tmp_name_len > alcf->name_last) {
-+        alcf->max_name_len = tmp_name_len + alcf->name_last;
++        alcf->max_name_len = tmp_name_len + 1 + alcf->name_last;
 +    }
 +
 +   /*
