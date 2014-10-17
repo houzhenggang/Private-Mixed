@@ -1,6 +1,6 @@
-diff -uNr a/ngx_http_autoindex_module.c b/ngx_http_autoindex_module.c
---- a/ngx_http_autoindex_module.c	Fri Aug 22 19:59:38 2014
-+++ b/ngx_http_autoindex_module.c	Thu Oct 16 21:38:09 2014
+diff -uNr a/src/http/modules/ngx_http_autoindex_module.c b/src/http/modules/ngx_http_autoindex_module.c
+--- a/src/http/modules/ngx_http_autoindex_module.c	Fri Oct 17 09:34:10 2014
++++ b/src/http/modules/ngx_http_autoindex_module.c	Fri Oct 17 09:34:21 2014
 @@ -40,13 +40,12 @@
      ngx_flag_t     enable;
      ngx_flag_t     localtime;
