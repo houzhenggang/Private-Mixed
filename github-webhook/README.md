@@ -16,8 +16,11 @@ GitHub-Webhook
  1. 根据示例配置文件配置 nginx
 
  2. 编辑并以指定的用户执行 `/usr/local/bin/webhook`  
+    `启动: /usr/local/bin/webhook`  
+    `停止: /usr/local/bin/webhook stop`  
 
- 3. 配置 GitHub 项目的 Webhook, Payload URL: `http://user:pass@host/webhook`
+ 3. 配置 GitHub 项目的 Webhook  
+    `Payload URL: http://user:pass@host/webhook`
 
 附加说明
 ---
