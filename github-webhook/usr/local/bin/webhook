@@ -3,17 +3,17 @@
 WEB_DIR=/home/www/website
 OUT_FILE=/tmp/webhook.out
 LOG_FILE=/tmp/webhook.log
+PID_FILE=/tmp/webhook.pid
 GIT_UA="GitHub-Hookshot"
 
 if [ "stop" = "$1" ]; then
-    pid=$(ps ax | grep -v "grep" | \
-        grep -v "stop" | grep "webhook" | \
-        awk '{print $1}')
+    pid=$(cat $PID_FILE)
     [ -n "$pid" ] && kill -9 $pid
     pid=$(ps ax | grep -v "grep" | \
         grep "nc -l 127.0.0.1 12345" | \
         awk '{print $1}')
     [ -n "$pid" ] && kill -9 $pid
+    rm -f $PID_FILE $OUT_FILE $LOG_FILE
     exit 0
 fi
 
@@ -27,3 +27,5 @@ fi
         # You can also add other commands
     }
 done) >$LOG_FILE 2>&1 &
+
+echo $! >$PID_FILE
