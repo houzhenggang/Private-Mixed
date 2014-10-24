@@ -1,12 +1,10 @@
 function rand_ip() {
-	var ip = [
+	return [
 		Math.floor(Math.random() * 225),
 		Math.floor(Math.random() * 225),
 		Math.floor(Math.random() * 225),
 		Math.floor(Math.random() * 225)
-	];
-
-	return ip.join('.');
+	].join('.');
 }
 
 function in_domain(reg, url) {
@@ -19,30 +17,28 @@ function in_domain(reg, url) {
 }
 
 function modifyHeader(headers, url) {
-	var i, reg_f, reg_r, len, Append, Request = {};
+	var i, reg_r, reg_x, len, Append, Request = {};
 
 	Append = {
-		referer: true,
+		referer: false,
 		forwarded: true,
 	};
-	len = headers.length;
-	reg_f = [
-		/https?:\/\/.+\.google\.com\/.*/
-	];
+
 	reg_r = [
+		/http:\/\/pan\.baidu\.com\/.*/
+	];
+
+	reg_x = [
 		/https?:\/\/www\.re\/.*/,
 		/https?:\/\/.+\.pcbeta\.com\/.*/
 	];
 
+	len = headers.length;
+
 	for (i = 0; i < len; i++) {
 		// console.log(headers[i].name + ': ' + headers[i].value);
-		if (headers[i].name == 'Referer') {
-
-			if (in_domain(reg_f, headers[i].value)) {
-				headers[i].value = url;
-			}
-
-			Append.referer = false;
+		if (headers[i].name == 'Referer' && in_domain(reg_r, url)) {
+			headers[i].value = url;
 		}
 
 		if (headers[i].name == 'X-Forwarded-For') {
@@ -54,15 +50,15 @@ function modifyHeader(headers, url) {
 	if (Append.referer) {
 		headers[len] = {
 			name: 'Referer',
-			value: url
+			value: url,
 		};
 		len++;
 	}
 
-	if (Append.forwarded && in_domain(reg_r, url)) {
+	if (Append.forwarded && in_domain(reg_x, url)) {
 		headers[len] = {
 			name: 'X-Forwarded-For',
-			value: rand_ip()
+			value: rand_ip(),
 		};
 		len++;
 	}
@@ -78,7 +74,7 @@ chrome.webRequest.onBeforeSendHeaders.addListener(
 		return modifyHeader(details.requestHeaders, details.url);
 	},
 	{
-		urls: [ '<all_urls>' ]
+		urls: [ '<all_urls>' ],
 	},
 	[
 		'requestHeaders',
