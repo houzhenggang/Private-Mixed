@@ -1,53 +1,23 @@
-function rand_ip() {
-	return [
-		Math.floor(Math.random() * 225),
-		Math.floor(Math.random() * 225),
-		Math.floor(Math.random() * 225),
-		Math.floor(Math.random() * 225)
-	].join('.');
-}
+function ModifyHeader(headers, url) {
+	var i, o, len, Request = {};
 
-function in_domain(reg, url) {
-	for (var i in reg) {
-		if (reg[i].test(url)) {
-			return true;
-		}
-	}
-	return false;
-}
-
-function modifyHeader(headers, url) {
-	var i, reg_r, reg_x, len, Append, Request = {};
-
-	Append = {
-		referer: false,
-		forwarded: true,
-	};
-
-	reg_r = [
-		/http:\/\/pan\.baidu\.com\/.*/
-	];
-
-	reg_x = [
-		/https?:\/\/www\.re\/.*/,
-		/https?:\/\/.+\.pcbeta\.com\/.*/
-	];
-
+	o = this;
 	len = headers.length;
 
 	for (i = 0; i < len; i++) {
 		// console.log(headers[i].name + ': ' + headers[i].value);
-		if (headers[i].name == 'Referer' && in_domain(reg_r, url)) {
+		if (headers[i].name == 'Referer' &&
+			o.inDomain(o.settings.referer.domain, url)) {
 			headers[i].value = url;
 		}
 
 		if (headers[i].name == 'X-Forwarded-For') {
-			headers[i].value = rand_ip();
-			Append.forwarded = false;
+			headers[i].value = o.randIp();
+			o.settings.forwarded.append = false;
 		}
 	}
 
-	if (Append.referer) {
+	if (o.settings.referer.append) {
 		headers[len] = {
 			name: 'Referer',
 			value: url,
@@ -55,10 +25,11 @@ function modifyHeader(headers, url) {
 		len++;
 	}
 
-	if (Append.forwarded && in_domain(reg_x, url)) {
+	if (o.settings.forwarded.append &&
+		o.inDomain(o.settings.forwarded.domain, url)) {
 		headers[len] = {
 			name: 'X-Forwarded-For',
-			value: rand_ip(),
+			value: o.randIp(),
 		};
 		len++;
 	}
@@ -66,12 +37,50 @@ function modifyHeader(headers, url) {
 	Request.requestHeaders = headers;
 
 	return Request;
-}
+};
+
+ModifyHeader.prototype = {
+	constructor: ModifyHeader,
+
+	randIp: function() {
+		return [
+			Math.floor(Math.random() * 225),
+			Math.floor(Math.random() * 225),
+			Math.floor(Math.random() * 225),
+			Math.floor(Math.random() * 225)
+		].join('.');
+	},
+
+	inDomain: function(reg, url) {
+		for (var i in reg) {
+			if (reg[i].test(url)) {
+				return true;
+			}
+		}
+		return false;
+	},
+
+	settings: {
+		referer: {
+			append: false,
+			domain: [
+				/http:\/\/pan\.baidu\.com\/.*/
+			],
+		},
+		forwarded: {
+			append: true,
+			domain: [
+				/https?:\/\/www\.re\/.*/,
+				/https?:\/\/.+\.pcbeta\.com\/.*/
+			],
+		},
+	},
+};
 
 chrome.webRequest.onBeforeSendHeaders.addListener(
 	function(details) {
 		// console.log('Request URL:', details.url);
-		return modifyHeader(details.requestHeaders, details.url);
+		return new ModifyHeader(details.requestHeaders, details.url);
 	},
 	{
 		urls: [ '<all_urls>' ],
