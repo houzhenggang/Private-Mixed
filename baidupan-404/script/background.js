@@ -17,7 +17,7 @@ function modifyHeader(headers, url) {
     Request.requestHeaders = headers;
 
     return Request;
-};
+}
 
 chrome.webRequest.onBeforeSendHeaders.addListener(
     function(details) {

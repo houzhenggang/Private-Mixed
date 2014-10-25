@@ -37,7 +37,7 @@ function ModifyHeader(headers, url) {
 	Request.requestHeaders = headers;
 
 	return Request;
-};
+}
 
 ModifyHeader.prototype = {
 	constructor: ModifyHeader,
