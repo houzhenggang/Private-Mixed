@@ -7,24 +7,26 @@ PID_FILE=/tmp/webhook.pid
 GIT_UA="GitHub-Hookshot"
 
 if [ "stop" = "$1" ]; then
-    [ -f $PID_FILE ] && kill -9 $(cat $PID_FILE)
-    pid=$(ps ax | grep -v "grep" | \
-        grep "nc -l 127.0.0.1 12345" | \
-        awk '{print $1}')
-    [ -n "$pid" ] && kill -9 $pid
-    rm -f $PID_FILE $OUT_FILE $LOG_FILE
+    if [ -f $PID_FILE ]; then
+        kill -9 $(cat $PID_FILE)
+    fi
+    pid=$(pidof nc)
+    if [ -n "$pid" ]; then
+        kill -9 $pid
+    fi
+    rm -f $PID_FILE $OUT_FILE
     exit 0
 fi
 
 (while [ 1 ]; do
     nc -l 127.0.0.1 12345 > $OUT_FILE
-    cat $OUT_FILE | grep "$GIT_UA" && \
-    {
+    echo -e "\nDATE: $(date)"
+    if grep -q "$GIT_UA" $OUT_FILE; then
         cd $WEB_DIR
-        # git checkout -- .
+        git checkout -- .
         git pull
-        # You can also add other commands
-    }
-done) >$LOG_FILE 2>&1 &
+        # You can add other commands
+    fi
+done) >>$LOG_FILE 2>&1 &
 
 echo $! >$PID_FILE
