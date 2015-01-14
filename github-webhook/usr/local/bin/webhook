@@ -21,11 +21,13 @@ fi
 (while [ 1 ]; do
     nc -l 127.0.0.1 12345 > $OUT_FILE
     echo -e "\nDATE: $(date)"
+    sleep 2
     if grep -q "$GIT_UA" $OUT_FILE; then
-        cd $WEB_DIR
+        pushd $WEB_DIR
         git checkout -- .
         git pull
         # You can add other commands
+        popd
     fi
 done) >>$LOG_FILE 2>&1 &
 
